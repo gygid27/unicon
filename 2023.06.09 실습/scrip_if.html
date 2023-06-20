@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    /*
+        제어문
+            -조건문 (if, switch)
+            -반복문 (for, while, do~while)
+
+        if문 - 조건식의 결과가 참이냐 거짓이냐에 따라 코드를 실행 시켜주는 제어문 분기문 이라고도 한다.
+        코드의 흐름을 점프해서 동작시키기 때문에 순차적 실행이 아니다.
+
+        if문의 구조
+        (조건식){조건식이 참이라면 실행할 코드}
+        
+    */   
+//    var age=19;
+//    if(age>=20){
+//     document.write("성인이다.")
+//     tmep=123; // 지역변수 - 블럭안에서 생성된 변수는 해당블럭에서만 사용가능
+//    temp=2323;
+//    const pi=3.14;} 
+   
+//    document.write("나는 if문과 아무상관없이 동작합니다.<br>");
+   // var age=19는 script안에 있기 때문에 동작이 가능하지만
+    // var tmep=123; 은 중괄호 안에 있기 때문에 사용할 수 없다.
+
+    // var age=19;
+    // if( age >=20){
+    //     document.write("성인이다.<br>");}
+    // else{
+    //         document.write("성인이 아니다.<br>")
+    //     }
+
+    //     //바이킹 탑승 조건 키가 150이상인 사람만 탈 수 있다.
+    //     var tall= parseInt( prompt("키를 입력하시오"));
+    //     if(tall>=150){
+    //         document.write("바이킹 탑승가능<br>")
+    //     }
+        
+    //     else{  
+    //         document.write("탑승불가<br>")
+    //     }
+
+        // 동전 앞면 뒷면 맞추기 1.앞면 2.뒷면
+        // var coin = Math.floor(Math.random() *2)+1;
+        // var select = parseInt(prompt("1.앞면 , 2.뒷면"));
+
+        // if(coin == select)//나의 값과 pc의 값이 같아야지 정답 == 표시를 해야함
+        // {
+        //     document.write("정답");
+        // }
+
+        // else{
+        //     document.write("삐 아니다.")
+        // }
+
+        // 주사위 1개를 던지다. 2의 배수가 나올때만 승리, 아니면 패배 출력
+        // var dice = Math.floor(Math.random()*6)+1
+        // if (dice % 2==0)
+        // {document.write("<div> 주사위의 결과는 : " + dice + "승리" +"</div>")}
+
+        // else{
+        //     document.write(" 당신은 패배")
+        // }
+
+
+        // 가위바위보를 if문으로 만드세요
+        // var com = Math.floor(Math.random() *3)+1
+        // var user = parseInt( prompt("1.가위 2.바위 3.보"));
+        // var calc = user-com;
+
+        // if(calc==1 || calc==-2)
+        // {
+        //     document.write("이김");}
+
+        // else{
+        //     if (calc==0){
+        //             document.write("비김")
+        //     }
+        //     else{document.write("패배")}
+        // }    
+
+
+     /*
+     선생님이 하신거
+     var com = Math.floor(Math.random()*3)+1;
+var user = parseInt( prompt("1.가위 2.바위 3.보"));
+
+if( com== user){
+    document.write("비김");
+}
+if( (user==1 && com==3) || (user==2&&com==1) || (user=3&&com==2)){
+    document.write("승리");
+}
+if( (user==1&&com==2) || (user==2&& com==3) || (user==3&&com==1)){
+    document.write("패배");
+}
+
+
+if( com== user){
+    document.write("비김");
+}else{
+    if( (user==1 && com==3) || (user==2&&com==1) || (user=3&&com==2)){
+        document.write("승리");
+    }else{
+        document.write("패배");
+    }
+}
+
+*/
+
+// 조건에 따른 결과가 3개 이상이면 else if
+// 조건식이 두개 이상 필요한경우 else if
+
+//주사위를 컴퓨터와 대결하기
+//주사위 각각 2개를 던진다.
+// 승리 조건은 두 주사위의 합이 큰쪽이 이기고, 같은 숫자가 나온경우에 승리
+
+var com1= Math.floor(Math.random() *6)+1;
+var com2= Math.floor(Math.random() *6)+1;
+
+var user1= Math.floor(Math.random() *6)+1;
+var user2= Math.floor(Math.random() *6)+1;
+
+var com_sum = com1+com2 , user_sum= user1+user2;
+
+// if( user_sum > com_sum ){ //나의 주사위 합이 더 큰경우
+//     if(com1==com2){// 내 합이 더크지만 컴퓨터 주사위가 같은경우
+//         if(user1==user2){ // 컴퓨터 주사위가 같지만 나도 주사위가 같은숫자인경우
+//             alert("나의 승리");
+//         }else{
+//             alert("나의 패배");
+//         }
+//     }else{//숫자가 클때
+//         alert("나의승리");
+//     }
+// }else if(user_sum < com_sum){ // 컴퓨터의 합이 더큰경우
+//     if(user1==user2){ // 내 주사위숫자가 같은경우
+//         if(com1==com2){ // 컴퓨터합이 크고 나는숫자가 같은경우에 컴퓨터도 같은숫자라면
+//             alert("나의패배");
+//         }else{
+//             alert("나의 승리");
+//         }
+//     }else{
+//         alert("나의 패배");
+//     }
+// }else{ // 주사위 합이 컴퓨터와 내가 같은경우
+//     if( user1==user2 && com1==com2){
+//         alert("비김");
+//     }else if(user1==user2){
+//         alert("나의승리");
+//     }else if(com1==com2){
+//         alert("나의 패배");
+//     }else{
+//         alert("비김");
+//     }
+// }
+
+// 점수가 100~90 A, 89~80 B, 79~70 C, 나머지는 F
+    // var score=91;
+    // if(score <=100 && score >=90) //크거 부터 만들어주기
+    //     alert("A등급");
+    
+    // else if(score <=90 && score >=80)
+    //     alert("B등급");
+
+    // else if(score <=80 && score >=70)
+    //     alert("C등급");
+
+    // else
+    //     alert("F등급"); 
+        
+      
+    //  var score=91;
+    //  if(score >=90)
+    //     alert("A등급");
+
+    // else if(score >=80)
+    //     alert("B등급");
+
+    // else if( score >=70)
+    //     alert("C등급");
+
+    // else
+    //     alert("F등급"); 
+
+    
+        
+
+   //100m 달리기, 10초 이하는 매우빨름,
+   // 10~12초는 빨름, 13~17초 보통, 18이상 느림 이라고 출력
+   
+//    var run = prompt("달리기 시간")
+//    if(  run >=18)
+//         alert("느림");
+//     else if(run >=13 && run<=17)
+//         alert("보통"); 
+//     else if (run >=10 && run<=12)
+//         alert("빠름");
+
+//     else
+//         alert("매우빠름");
+
+
+// 주차장의 기본요금이 1000원이다. 1000원에 기본 주차 시간은 30분이다.
+// 10분 초과시 100원씩 추가 요금있다.
+
+//2시간 이상 주차시 기본요금은 1500원이다.
+//4시간 이상 주차시 기본요금은 2500원이다.
+//8시간 이상 주차시 요금은 추가요금없이 무조건 10000원이다.
+
+// 주차 시간을 입력해서 주차요금이 얼마인지 출력하기 , 주차시간은 분단위 입력
+// 요금 예시)  61분 주차시  요금은 1300원(기본요금 1000원에 30분초과 300원)
+//             119분 주차시 요금은 1800원(기본요금 1000원에 80분초과 800원)
+//             134분 주차시 요금은 1600원(2시간 이상주차이기때문에
+     //                  기본요금은 1500원이고 10분초과 100원)
+     
+// var time=parseInt( prompt("주차시간 분"));
+// var cost=1000;
+
+// if( time >=480) {// 8시간이상이면  
+//     cost=10000;
+//     time=0;
+// }
+// else if( time>=240 ){ //4시간 이상이면
+//     cost=2500;  //기본요금이 2500원으로 변경
+//     time -=240; // 총 주차시간에서 4시간에대해서 빼기
+// }else if( time >= 120 ) {// 2시간 이상이라면
+//     cost=1500; //기본요금이 1500으로 변경
+//     time -= 120;  // 총주차시간에서 2시간에 대해서 빼기 
+//                   //  왜? 2시간 제외시간에대한초과금액계산하려구
+// }else if(time >= 40 ) {//40분 이상이라면
+//     time-=30; // 기본시간이 30분이니까 
+// }else{
+//     time=0;
+// }
+// var price = cost + (parseInt(time/10) *100);
+// document.write("요금 : "+price);
+
+// 숫자를 하나입력받는다. 숫자는 1~3 중에 하나만 입력
+// 1을 입력했다면 빨간색 사각형이
+// 2를 입력했다면 노랑색 사각형이
+
+// var num = prompt("1~3 중에서 하나만 입력하세요");
+// if( num==1){
+//     document.write("<div class='red'> </div>");
+// }
+
+// else if(num == 2){
+//     document.write("<div class='yellow'> </div>");
+// }
+
+// else{
+//     document.write("<div class='babypink'></div>");
+// }
+
+// red이라고 입력하면 빨간색 사각형이
+// yellow이라고 입력하면 노랑색 사각형이
+// blue이라고 입력하면 파랑색 사각형이 그려지게 만드시오
+// 사각형의 너비높이는 위와 동일
+
+// var color =prompt("red, yellow, blue 중에서 하나만 입력하세요")
+// if(color === "red"){
+//     document.write("<div class = red></div>");
+// }
+
+// else if( color == "yellow"){
+//     document.write("<div class = yellow></div>");
+// }
+
+// else if( color == "blue"){
+//     document.write("<div class = blue></div>");
+// }
+
+// document.write("<div class="+color+"></div>"); // 이걸로만 해서 가능
+
+// //문자열은 따옴표로 꼭 입력하세요
+
+
+
+
+// 주사위 게임 문제
+// 주사위 3개있다.
+// 3개의 주사위를 굴렸을때 나온 각각 a,b,c 라고 한다면
+// 세숫자 모두 다른 경우 a+b+c의 값 출력
+// 두 숫자가 같고 나머지가 다른 숫자라면 a*a+b*b+c*c
+// 세 숫자가 모두 같다면 a*b*c의 값 출력
+
+var a = Math.floor(Math.random() * 6)+1;
+var b = Math.floor(Math.random() * 6)+1;
+var c = Math.floor(Math.random() * 6)+1;
+
+
+
+
+
+if(a==b && b!=c ){
+    document.write("두 숫자가 같다면: "+ (a*a+b*b+c*c))
+}
+
+else if(b==c && a!=b){
+    document.write("두 숫자가 같다면: " +(a*a+b*b+c*c))
+}
+
+else if(a==c && b!=c){
+    document.write("두 숫자가 같다면: "+ (a*a+b*b+c*c));
+}
+
+
+else if(a==b && b==c && a==c){
+    document.write("모두 같다면 : " +(a*b*c));
+}
+
+else if(a!= b && b!= c && c!=a){
+    document.write("모두 다르다면 :" +(a+b+c));
+    
+}
+
+
+
+
+
+        
+
+
+
+
+
+
+        
+
+
+
+    
+
+</script>
+<style>
+.red{ background: red;  width:200px; height:100px;
+} 
+.yellow{background: yellow;  width:200px; height:100px;
+}
+.babypink{background: pink;  width:200px; height:100px;
+ }
+
+ .blue{background: blue; width:200px; height:100px;}
+   
+
+</style>
+</head>
+<body>
+    
+</body>
+</html>

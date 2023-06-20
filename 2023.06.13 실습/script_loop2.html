@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //실습 문제
+        //실습1.
+        //랜덤 범위 1~100, 무한루프 사용
+        // 랜덤 값 중에서 4의 배수의 값이 10개가 나오면 무한루프 중지
+
+        //시작
+
+        
+        // var count =0
+        // while(true){
+        //     var num=Math.floor(Math.random()*100)+1;
+        //     if(num%4 == 0){
+        //             count++; //4의배수를 1씩 증감시킨다.
+        //             document.write("랜덤값 4의 배수 : "+num+" count : "+count );
+        //     }
+        //     if(count == 10){break;}
+
+            
+            
+        // }
+        // document.write(count);
+
+        // for(i=1; i<=10; i++ ){
+        //     var user = parseInt(prompt("정수를 입력하시오"));
+        //     document.write("당신이 입력한 정수는?:"+user+"<br>");
+            
+        // } 
+
+
+        //실습3.
+        // 이번 문제는 혼자가 아니라 팀으로 풀어야합니다.
+        // 총 2문제이고 각 팀에서 만들고 싶은 문제 하나를 선택해서 만들면 됨
+
+        
+        for(var a=1; a<=9; a++){// 비밀번호 1번째 숫자는 1~9사이값이다.
+                for(var b=1;b<=9;b++){ // 비밀번호 2번째 숫자는 1~9사이값이다.
+                    for(var c=1; c<=9;c++){// 비밀번호 3번째 숫자다.
+                        for(var d=1; d<=9; d++){ // 비밀번호 4번째 숫자는 1~9사이값이다.
+                         
+                            if(a!=b && a!=c && a!=d && b!=c && b!=d && c!=d){
+                                // 4개 숫자는 서로 다른 숫자다.
+                                if(a==d+2){// 1번째 숫자는 4번째 숫자보다 2만큼 크다.
+                                    if(b<c){ //4. 2번째 숫자는 3번째 숫자 보다 작다.
+                                        e= a*1000+b*100+c*10+d;
+                                        f= d*1000+c*100+b*10+a;
+                                        if(e+f == 16896){//5. 비밀번호 숫자 + 비밀번호 역순 숫자
+                                            document.write(e);
+                                            break;
+                                        }
+                                    } 
+                                }   
+                            }
+                        }
+                    }
+                }
+        }
+        
+
+
+
+
+
+
+            
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

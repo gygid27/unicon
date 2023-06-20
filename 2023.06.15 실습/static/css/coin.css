@@ -1,0 +1,27 @@
+.coin{
+    display:flex;
+    justify-content: center;
+
+}
+.coin_img{
+    width:300px;
+}
+
+.select{
+    display:flex;
+    justify-content: center;
+    margin:50px 0;
+}
+
+.select b{
+    display:inline-block;
+    font-size:30px;
+    padding:20px 50px;
+    background:blueviolet;
+    color:blue;
+}
+
+.select b:hover{
+    background:blue;
+    color:blueviolet;
+}

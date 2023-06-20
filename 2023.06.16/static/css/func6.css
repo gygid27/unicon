@@ -1,0 +1,40 @@
+.box{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+img {width:100%}
+.com{
+    width:20%;
+    max-width:300px;
+}
+
+.dicebox{
+    width:500px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:30px;
+}
+.dicebox b{
+    display:block;
+}
+.dicebox button{
+    background-color: darkmagenta;
+    color:cornsilk;
+    border:0;
+    padding:20px 25px;
+    border-radius:60px;
+    cursor:pointer;
+}
+
+
+
+.user p{
+    width:200%;
+    max-width:300px;
+}
+
+.user p:hover{
+    cursor:pointer;
+}
