@@ -1,0 +1,90 @@
+*{box-sizing: border-box;} 
+/* 모든 태그에 border-box sizing 적용 */
+body, ul, p, h1,h2,h3,h4,h5,
+ol,dl{
+    padding:0;
+    margin:0;
+}
+
+ul{
+    list-style:none;
+}
+
+#wrap{
+    width:85%;
+    min-width:500px;
+    max-width:1000px;
+    margin:50px auto;
+}
+
+.line{
+    border-bottom:2px solid black;
+}
+
+#menu{
+    display:flex;
+    justify-content:space-around;
+    margin-bottom:20px;
+
+}
+
+.menu_bt{
+    font-size:25px;
+    display:inline-block;
+    padding:10px 20px;
+    background-color:darkturquoise;
+    border-radius: 20px;
+    color:white;
+    font-weight:900;
+    /*글씨 굵기 */
+    text-shadow: 0px 0px 1px black;
+    /* 글씨의 강조를 주기 위해 글씨에 그림자 넣어주기 */
+    
+}
+
+.menu_icon{
+    display:none;
+    position: relataive;
+}
+
+.strapIcon{
+    font-size:30px;
+    cursor: pointer;
+}
+
+/* .strapIcon:active ~ .menu_list{
+    /* "~" 표시는 형제를 의미한다. */
+    /* display:block;
+} */ 
+
+.menu_list{
+    position: absolute;
+    /*부모의 영향을 받아 고정된 값을 주기 때문에 줄 위에 표시되는 것이다 */
+    background:greenyellow;
+    width:100%;
+    display:none;
+}
+
+.list_active{
+    display:block;
+}
+
+@media screen and (max-width:786px){
+    #menu{
+        display:block;
+        /* display를 줘서 공간 전체를 사용하게 함 */
+        position: relative;
+    }
+    .menu_icon{
+        /*크기를 줄여주게 아이콘과 함께 메뉴 리스트 뜸*/
+        display:block;
+    }
+    .menu_bt{display:none;}
+    /*크기를 줄였을 때 메인메뉴가 사라짐 */
+}
+/* 이하 : max-width
+    이상 : min-width
+    웹 제작을 pc 우선으로 제작시 max-width
+    모바일 우선으로 제작시 min-width */
+
+    

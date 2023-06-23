@@ -38,9 +38,9 @@ function calc(){
     // [5번 공정]
     // out 변수에 몰아넣어서 출력에 사용해줄 겁니다.
     out= "국어 : " + kor + " " + calc_grade(kor) +
-         "<br> 수학 : " + mat + " " + calc_grade(mat) + 
-         "<br> 영어 : " + eng + " " + calc_grade(eng) +
-         "<br> <b>평균</b> : " + parseInt(ev) + " " + calc_grade(ev);
+            "<br> 수학 : " + mat + " " + calc_grade(mat) + 
+            "<br> 영어 : " + eng + " " + calc_grade(eng) +
+            "<br> <b>평균</b> : " + parseInt(ev) + " " + calc_grade(ev);
     
 
     // [6번 공정]
@@ -54,7 +54,7 @@ function calc(){
 // 그래서 공통되는 과정을 function으로 따로 묶습니다.
 function calc_grade(score){
     if( score >= 90){ // 90보다 크다면
-         return "A";
+        return "A";
     }else if((score<90) && (score>=80)){ // 80~89 라면
         return "B";
     }else if((score<80) && (score>=70)){ // 70~79 라면
