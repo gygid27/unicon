@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./static/css/bingo.css">
+    <script>
+    let game=new Array();
+
+    function idEvent(eName,name,func){
+    var id = document.getElementById(name); 
+    id.addEventListener(eName,func);
+}
+function classEvent(eName,name,func){
+    var cls = document.getElementsByClassName(name); 
+    for( var i=0; i<cls.length; i++)
+        cls[i].addEventListener(eName,func);
+}
+
+
+function num_init(){
+    for(var i=1; i<=25; i++){
+        var temp = (Math.floor(Math.random()*50)+1);
+        if(game.indexOf(temp) == -1) game.push(temp);
+        else i--;
+    }
+}
+window.onload=function(){
+    num_init();
+    idEvent("click","game_start",start);
+    classEvent("click","num",choice_num);
+}
+
+function start(){
+    var cls = document.getElementsByClassName("num"); 
+    for(var i=0; i<cls.length; i++){
+        cls[i].innerText=game[i];
+    }
+}
+function choice_num(){
+    this.classList.add("check");
+
+    var sel_num=this.innerText;
+    for(var i=0; i<game.length; i++){
+        if( sel_num==game[i]){
+            game[i]=0; break;  // 클릭한 곳의 숫자를 0으로 변경
+        }
+    }
+}
+
+function check_bingo(){
+    var rows= document.ElementByTagName("tr"); // 빙고에 있는 모든 행 가져오기
+    var cols= document.ElementByclassName("num"); //빙고에 있는 열 가져오기
+    var count = 0; // count 변수를 사용하므로써 클릭을 누적시켜 가로와 세로의 빙고를 확인할 수 있음
+    //이를 통해 count가 5라면 해당 줄의 빙고가 완성된 것을 알수 있다.
+    
+    for(var i=0; i<rows.length; i++){
+        var rowcell = rows[i].getElementsByTagName('td');
+        // 행의 요소들을 반복하기 위해서 사용된 for문
+        var rowsum = 0;
+        //체크된 셀의 갯수를 알려주는 것이다.(체크된 셀 개수를 세어주고 그 갯수가 전체 셀 갯수와 같은지 확인)
+        for (var j = 0; j < rowcells.length; j++)
+        // rowcell은 모든 셀의 갯수  {
+            if(rowCells[j].classList.contains('ckeck')){
+                rowSum++;
+            }
+            
+        }
+   
+    if(rowSum === rowCells.length){
+        alert("재미없어 빙고~~~!!!");
+    }
+
+    for(var i = 0; i < cols.length; i++){
+        if(cols[i].classList.contains('check')){
+            count++;
+        }
+        if((i + 1) % 5 === 0){
+            if(count === 5){
+                alert("축하합니다 빙고");
+            }
+            count = 0;
+        }
+    }
+    var diagonal1Sum = 0;
+    var diagonal2Sum = 0;
+    for (var i = 0; i < cols.length; i += 6) {
+        if (cols[i].classList.contains('check')) {
+            diagonal1Sum++;
+        }
+    }
+    for (var i = 4; i < cols.length - 1; i += 4) {
+        if (cols[i].classList.contains('check')) {
+            diagonal2Sum++;
+        }
+    }
+    if (diagonal1Sum === 5) {
+        console.log("대각선 빙고 발생!");
+    }
+    if (diagonal2Sum === 5) {
+        console.log("대각선 빙고 발생!");
+    }
+}
+        
+        
+
+    
+    </script>
+</head>
+<style>
+        .num{border:1px solid black; width:80px; height:80px;}
+    .check{background:pink;}
+</style>
+<body>
+    <div id="wrap">
+        <button id="game_start">빙고시작</button>
+        <table >
+            <tr>
+                <td class="num"></td>
+                <td class="num"></td>
+                <td class="num"></td>
+                <td class="num"></td>
+                <td class="num"></td>
+                
+
+            </tr>
+            <tr>
+                <td class="num"></td>
+                <td class="num"></td>
+                <td class="num"></td>
+                <td class="num"></td>
+                <td class="num"></td>
+
+            </tr>
+            <tr>
+                <td class="num"></td>
+                <td class="num"></td>
+                <td class="num"></td>
+                <td class="num"></td>
+                <td class="num"></td>
+
+            </tr>
+            <tr>
+                <td class="num"></td>
+                <td class="num"></td>
+                <td class="num"></td>
+                <td class="num"></td>
+                <td class="num"></td>
+
+            </tr>
+            <tr>
+                <td class="num"></td>
+                <td class="num"></td>
+                <td class="num"></td>
+                <td class="num"></td>
+                <td class="num"></td>
+
+            </tr>
+            
+
+        </table>
+        <div class="name"></div>
+    </div>
+    
+</body>
+</html>
