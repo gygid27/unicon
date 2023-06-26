@@ -7,7 +7,16 @@ ol,dl{
 }
 
 ul{
-    list-style:none;
+    list-style-type:none;
+}
+
+a{
+        text-decoration:none;
+        
+}
+
+a:hover{
+    text-decoration: underline;
 }
 
 #wrap{
@@ -15,7 +24,8 @@ ul{
     min-width:500px;
     max-width:1000px;
     margin:50px auto;
-}
+ }
+ /* 센세 화이팅! ♡ -센세의 향이가- */
 
 .line{
     border-bottom:2px solid black;
@@ -32,7 +42,7 @@ ul{
     font-size:25px;
     display:inline-block;
     padding:10px 20px;
-    background-color:darkturquoise;
+    background-color:black;
     border-radius: 20px;
     color:white;
     font-weight:900;
@@ -77,8 +87,59 @@ ul{
     padding:10px;
 }
 
+#input_box{
+    margin:50px auto;
+    width:320px;
+}
+
+.mynum{
+    width:50px;
+    height:50px;
+    font-size:30px;
+}
+
+.mynum::-webkit-outer-spin-button,
+.mynum::-webkit-inner-spin-button{
+    -webkit-appearance: none; margin:0;
+}
+
+#bt{
+    width:320px;
+    margin: 0 auto;
+    text-align:right;
+    top: -20px;
+}
+
+#bt button{
+    border:0;
+    background-color: rgb(178, 106, 106);
+    font-size:25px;
+    padding:5px 25px;
+    color:azure;
+}
+
 .list_active{
     display:block;
+}
+
+.makeTable{
+    border-spacing: 0;
+    width:300px;
+    margin: 50px auto;
+}
+
+.makeTable tr .numTd:first-child{
+    border:0;
+    width:100px;
+
+}
+
+.numTd{
+ border:1px solid goldenrod;
+ width:50px;
+ height:50px;
+ text-align: center;
+ font-size:20px;
 }
 
 @media screen and (max-width:786px){
