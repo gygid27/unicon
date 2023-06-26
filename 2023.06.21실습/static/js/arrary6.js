@@ -27,6 +27,7 @@ function image_init(){
             --i;
         }
     }
+    // 반드시 들어가야 하는 값이기 때문에 if eles 문이 꼭 들어가야 한다.
     var img = document.getElementsByClassName("picture");
     for( var i=0; i<img.length; i++){
         img[i].style.background="url("+(path+image_name[image_position[i]%6])+") no-repeat center";

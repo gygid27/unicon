@@ -24,7 +24,8 @@ a:hover{
     min-width:500px;
     max-width:1000px;
     margin:50px auto;
-}
+ }
+ /* 센세 화이팅! ♡ -센세의 향이가- */
 
 .line{
     border-bottom:2px solid black;
@@ -41,7 +42,7 @@ a:hover{
     font-size:25px;
     display:inline-block;
     padding:10px 20px;
-    background-color:darkturquoise;
+    background-color:black;
     border-radius: 20px;
     color:white;
     font-weight:900;
@@ -84,6 +85,37 @@ a:hover{
 .list_bt{
     display:block;
     padding:10px;
+}
+
+#input_box{
+    margin:50px auto;
+    width:320px;
+}
+
+.mynum{
+    width:50px;
+    height:50px;
+    font-size:30px;
+}
+
+.mynum::-webkit-outer-spin-button,
+.mynum::-webkit-inner-spin-button{
+    -webkit-appearance: none; margin:0;
+}
+
+#bt{
+    width:320px;
+    margin: 0 auto;
+    text-align:right;
+    top: -20px;
+}
+
+#bt button{
+    border:0;
+    background-color: rgb(178, 106, 106);
+    font-size:25px;
+    padding:5px 25px;
+    color:azure;
 }
 
 .list_active{
