@@ -1,0 +1,49 @@
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  font-size:30px;
+}
+
+#container{
+  display: grid;
+  grid-template-columns:repeat(5,300px) ;
+   grid-template-rows: 50px 100px 150px  300px 500px;
+  /* grid-template-rows: ; */
+  gap:24px;
+}
+
+.items{
+  border:1px solid black;
+  border-radius: 10px;
+
+}
+
+
+
+.items:nth-child(1){
+  grid-row:1/6;
+  
+}
+/* 5줄이니깐 총 6줄로 해야한다, 걍 외워라 */
+
+.items:nth-child(2){
+  transform: translate(-163px, 0px)  scaleX(1.254);
+  Z-index:1;
+}
+
+/*2번의 크기를 늘리려면 transform*/
+
+
+
+.items:nth-child(2) , .items:nth-child(3), .items:nth-child(10){
+  grid-column: auto /span 4;
+
+}
+/* 열번호로 따져야 하므로 column을 사용해야 한다.
+  span 4는 4칸을 의미한다. */
+
+.items:nth-child(8), .items:nth-child(9){
+  grid-column: auto/span 2;
+}  

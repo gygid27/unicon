@@ -1,0 +1,126 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+
+
+#container{
+  display:grid;
+  /* grid-template-columns: repeat(5, minmax(150px, auto));
+   */
+  grid-template-columns: repeat(3, minmax(200px,auto));
+  /* grid-template-rows: minmax(5 200px); */
+  grid-template-rows: repeat(5, 200px);
+  gap:10px;
+  
+    /* column-gap: 10px;
+  row-gap: 20px; 이거를 한번에 주는 방법 */
+  /* gap:30px 15px; */
+  /*행간격 열간격*/
+  /* gap:30px; 행과 열에 대한 간격 */
+
+  /* row-gap:20px;
+  column-gap: 10px;
+  둘다 같은 뜻이지만 브라우저가 적용 안되는 경우가 있어서 알려주시는 것이다.
+  grid-row-gap:20px;
+  grid-column-gap: 10px; */
+
+  grid-template-areas:
+"head head head"
+"sideA main sideB"
+". . ."
+"foot foot foot"
+;
+
+}
+/* 플렉스로 하는 방법 부모태그에 넣을 것들
+display:flex;
+flex-wrap:wrap;
+width:100%
+min-width:750px; */
+
+
+
+
+
+.item{
+  border: 1px solid black;
+}
+
+.item:nth-child(1){grid-area:head;}
+.item:nth-child(2){grid-area:sideA;}
+.item:nth-child(3){grid-area:main;}
+.item:nth-child(4){grid-area:sideB;}
+.item:nth-child(5){grid-area:foot;}
+
+
+
+
+
+/* .item:nth-child(1){
+  grid-column:2;
+}
+
+.item:nth-child(3){
+  grid-column:2;
+}
+
+.item:nth-child(4){
+  grid-row:1/4;
+} */
+
+
+
+/* 플렉스로 하는 방법 자식 태그에 넣을 것들
+width:20%;
+min-width:150px;
+height:100%;
+min-height:200px;
+border:1px solid black;
+box-sizing:border-box; */
+
+/* .item:first-child{
+  grid-column-start:1;
+  grid-column-end:3;
+  
+
+}
+
+.item:nth-child(2){
+  grid-column-start:3;
+  grid-column-start:6;
+}
+
+
+.item:nth-child(4){
+  grid-column-start:5;
+  grid-column-start:7;
+  grid-column-start:1/4;
+}
+
+
+.item:nth-child(3){
+    grid-row-start:3;
+    grid-row-end:5;
+    grid-column-start:1;
+    grid-column-end:6;
+}
+
+.item:nth-child(5){
+  grid-column-start:2;
+  grid-column-start:3;
+  
+} */
+
+
+
+
+
+
+
+
+
+
+/* 열라인 1~3까지를 표현 */

@@ -1,0 +1,139 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  background:white;
+  color:black;
+}
+
+#wrap{
+  margin: 0 auto;
+  display:grid;
+  justify-content:center;
+  gap:20px;
+  grid-template-columns: repeat(6,lfr);
+  grid-template-rows: 140px 100px 680px 400px 550px 280px 200px ;
+  
+  
+  
+  /* 이걸써서 my어쩌고가 사이 간격 발생 */
+
+}
+
+#nav{
+   display:grid;
+   height:30px;
+   position:sticky;
+   top:0;
+
+
+   
+}
+
+
+#title{
+  
+   grid-column:1/7;
+   display:grid;
+   font-size: 25px;
+  align-self:center;
+  justify-content:space-between;
+  grid-template-columns: 1fr 1fr;
+  font-weight: 100;
+  align-items:center;
+}
+
+#title i{
+  justify-self:end;
+  font-size:40px;
+}
+
+#sub_title{
+  grid-column:1/7;
+  display:grid;
+
+}
+
+
+
+
+.menu{
+  display:grid;
+  justify-self:right;
+  align-self:start;
+}
+
+#menu_list ul{
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  list-style-type: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#section{
+  display:grid;
+  grid-template-columns: repeat(4, 400px);
+  grid-template-rows: repeat(4, 300px);
+  gap:20px;
+}
+
+.picture{
+   border-radius: 5px;
+   overflow:hidden;
+}
+
+.picture:nth-child(1){
+  background:url(../image/pic1.jpg);
+  background-size:cover;
+  
+ 
+
+
+}
+
+.picture:nth-child(2){
+  background:url(../image/pic2.jpg);
+  background-size:cover;
+  
+  
+  
+}
+
+
+.picture:nth-child(3){
+  background:url(../image/pic3.jpg);
+  background-size:cover;
+
+}
+
+.picture:nth-child(4){
+  background:url(../image/pic4.png);
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+
+.picture:nth-child(5){
+  background:url(../image/pic5.jpg);
+  background-size:cover;
+  background-repeat:no-repeat;
+ 
+}
+
+.picture:nth-child(6){
+  background:url(../image/pic6.jpg);
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+

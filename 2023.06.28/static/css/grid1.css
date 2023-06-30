@@ -1,0 +1,116 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+/*
+그리드 컨테이너
+-display:grid를 적용하는, Grid의 전체영역
+그리드 컨테이너 안의 요소들의 그리드 규칙의 영향을 받아 정렬된다.
+
+그리드 아이템
+-그리드 컨테이너의 자식 태그들.
+ 그리드 규칙에 의해 배치가 된다.
+
+그리드 트랙
+- 그리드의 행과 열
+
+그리드 셀
+-그리드의 한 칸을 가리키는 말, 그리드 아이템 하나하나씩을
+셀이라 한다.
+
+그리드 라인
+-그리드 셀을 구분하는 선
+
+그리드 번호
+-각 그리드 라인에는 1번부터 번호가 부여된다.
+-1행만 있는 경우 그리드번호는 행번호 1,2가 있다.
+
+
+그리드 갭
+- 그리드 셀 사이의 간격
+
+Grid 속성들은 FLEX와 마찬가지로
+부모(컨테이너)에 적용하는 속성과 justify-content, align-item  부모에 포함
+자식(아이템)에 적용하는 속성이 있다.
+align-self 자식에게 포함하는 것이다.
+
+grid-template-columns 그리드 열의 각셀의 너비값
+grid-template-rows 그리드 행의 각셀의 높이값
+  -grid-template-columns : 100px 100px;
+  이렇게 하면 한줄에 2개의 셀에 너비를 100px 설정
+  6개일 경우 3줄이 나오고
+
+  -grid-template-columns: 150px 100px 200px;
+  이렇게 하면 한줄에 3개의 셀에 150px 100px 200px 씩 너비설정
+  6개일 경우 2줄이 나온다.
+  
+  repeat()함수 - repeat(반복횟수, 반복값)
+    repeat(4, 100px) 하면 한줄에 4개씩 표기하고 각셀에 너비에100px
+
+    minmax()함수 - minmax(최솟값, 최대값)
+      minmax(100px, 300px) 각셀의 너비가 최소 100에서
+          최대 300까지 늘어난다.
+
+       auto-fill auto-fit
+       -column의 개수를 미리 정하지 않고 설정된 너비가 허용하는 한 최대한 셀을 채운다.
+       fit 한 곳에 꽉 채우게 해주는 것
+       auto-fill 너비를 유지하는 것
+
+
+       그리드 간격
+       row-gap , column-gap
+       gap: 10px 20px;  - row 10 , column 20
+       gap: 15px; - row,column 15
+
+       grid-auto-columns, grid-auto-rows
+        -template이 아닌 autoㄹ 변경해주면 알아서 크기 지정해라 의마한다.
+        횟수 지정해서 반복 하지 않아도 부모(컨테이션)의 크기에 맞춰서 
+        알아서 행과 열이 적용된다.
+
+        단점은 통제를 벗어나 알아서 자동으로 설정되기 때문에 다루기 힘들다.
+        크기를 통제하지 않으면 전체 레이아웃 구성에 어려움이 생긴다.
+        그래서 auto는 모바일용이나 소규모 레이아웃구성에 사용된다.
+
+        각 셀의 영역을 지정하는 방법
+        자식(grid-item)에 적용하는 속성
+        
+        grid-column-start, grid-column-end, grid-column,
+        grid-row-start, grid-column-end, grid-row
+       
+  
+
+*/ 
+
+
+#container{
+ 
+  display:grid;
+  /* 한줄만 배치하는 것이  플렉스이다 */
+  /* flex-wrap:wrap; */
+  /* 여러줄 배치 하는 플렉스 방법이다. */
+  /* grid-template-columns: repeat(5,200px); */
+  /* grid-template-columns:repeat(5,lfr); */
+  grid-template-columns:repeat(auto-fit, minmax(200px,auto)); /* 한줄에 3개만 나오게 해라 */
+  grid-template-rows:repeat(5,200px);
+  /* 몇줄 나오게 할 것인가  알아서 지정해주는 것*/
+  /* column-gap: 10px;
+  row-gap: 20px; 이거를 한번에 주는 방법 */
+  gap:30px 15px;
+  /*행간격 열간격*/
+  /* gap:30px; 행과 열에 대한 간격 */
+
+  /* row-gap:20px;
+  column-gap: 10px;
+  둘다 같은 뜻이지만 브라우저가 적용 안되는 경우가 있어서 알려주시는 것이다.
+  grid-row-gap:20px;
+  grid-column-gap: 10px; */
+
+}
+
+.item{
+  
+  border:1px solid  black;
+}
+
