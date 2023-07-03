@@ -40,6 +40,13 @@ window.onload=function(){
     var title = 태그선택("title")
     title.innerHTML=round+"강 "+count+"/"+(round/2);
 
+    //토너먼트1= image; 이건 똑같은 복사가 아니라 참조 복사 같은 공간 이미지 배열의 값이 달라지지 않음
+    토너먼트1 = Array(round).fill().map((arr,i) =>i);
+    //0부터 31까지 숫자 토너먼트1 배열에 저장
+    
+    //참조복사와 얕은 복사의 차이점
+
+
     순서섞기();
     show();
     //이미지 클릭 이벤트 등록
@@ -52,9 +59,47 @@ window.onload=function(){
     
 
 }
+
+function final(id, nid){
+      var n = 태그선택(nid);
+      n.style.display="none";
+      var 최종 = 태그선택(id);
+      최종.style.width="100%";
+      최종.style.height="100vw";
+}
+
+
 function 선택(){
-      count++;
-      show();
+     if( this == 태그선택("left")){
+      토너먼트2.push(토너먼트1[순서[count*2-2]]);
+     
+     }else{
+      토너먼트2.push(토너먼트1[순서[count*2-1]]);
+      }
+      //결정이 된 순간만인 상태
+
+      if(round==2) final("left","right");
+
+     if(count==round/2){
+       round= round/2;
+      count=0;
+      //끝났으니깐 다시 1로 시작해야 한다.
+      순서=new Array();
+      //초기화 해서 다시 16강으로 바꿔주기
+
+      
+
+      순서섞기();
+      토너먼트1 = 토너먼트2.map((i) =>i);
+      토너먼트2=new Array();
+
+     }
+     count++;
+     //몇번째 클릭했는지를 알려주는 아이
+     var title = 태그선택("title")
+     title.innerHTML=round+"강 "+count+"/"+(round/2);
+     show();
+
 }
 function show(){
     var left= 태그선택("leftimg");
@@ -64,12 +109,15 @@ function show(){
 
   
 
-    left.src="./static/image/"+image[순서[count*2-2]];
+    left.src="./static/image/"+image[토너먼트1[순서[count*2-2]]];
     //순서[0] 덕분에 화면에 이미지가 나올 수 있는 것이다.
-    right.src="./static/image/"+image[순서[count*2-1]];
+    right.src="./static/image/"+image[토너먼트1[순서[count*2-1]]];
 
-    leftText.innerHTML=kind[순서[count*2-2]];
-    rightText.innerHTML=kind[순서[count*2-1]];
+    leftText.innerHTML=kind[토너먼트1[순서[count*2-2]]];
+    rightText.innerHTML=kind[토너먼트1[순서[count*2-1]]];
 
 }
+
+
+
 
