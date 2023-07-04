@@ -5,11 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="./static/js/test.js"></script>
- 
-  
+  <style>
+    #wrap{
+      padding:0;
+      margin:0;
+      box-sizing: border-box;
+      width:300px;
+    }
+    .up{
+      display:flex;
+      justify-content:space-between;
+    }
+    .down{
+      margin-top:30px;
+      display:grid;
+      grid-template-columns: 1fr 3fr;
+    }
+    
+    #cal{
+      height:200px;
+    }
+    .down div{
+      border:1px solid black;
+    }
+    
+    .right{
+      display:flex;
+      justify-content: center;
+    } 
 
+    .left{
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  </style>
 </head>
 <body>
-     <div id="res"></div> 
+     <!-- <div id="wrap">
+        <div class="left">  
+          <div id="subject">
+            <div>국어 : <input type="text" id="kor"></div>
+            <div>영어 : <input type="text" id="eng"></div>
+            <div>수학 : <input type="text" id="mat"></div>
+            <div>과학 : <input type="text" id="sci"></div>
+          </div>  
+          <button id="avg">평균</button>
+        </div>
+        <div class="right">결과 : </div>
+    </div> -->
+
+<div id="wrap">
+        
+  <div class="up">
+    <div class="left">
+      <div>국어 : <input type="text" id="kor"></div>
+      <div>영어 : <input type="text" id="eng"></div>
+      <div>수학 : <input type="text" id="mat"></div>
+      <div>과학 : <input type="text" id="sci"></div>
+      <div>체육 : <input type="text" id="gym"></div>
+      <div>음악 : <input type="text" id="mis"></div>
+      <div>역사 : <input type="text" id="his"></div>
+    </div>
+    <div class="right">
+     <button id="cal">평균계산</button>
+    </div>  
+  </div>
+  <div class="down">
+    <div>평균 </div>
+    <div class="result_box"></div>
+    <div>총점 </div>
+    <div class="total_box"></div>
+  </div>
+</div>
+        
+
+    
+
+
+
 </body>
 </html>
