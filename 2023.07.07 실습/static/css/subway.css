@@ -1,0 +1,134 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+#map{
+  width:1000px;
+  margin:0 auto;
+  display:flex;
+  flex-wrap:wrap;
+  row-gap:20px;
+/* 줄 간격은 
+열간격은 column-gap이구만 */
+}
+
+.station{
+  width:100px;
+  text-align:center;
+  position:relative;
+}
+
+.mark{
+  position:relative;
+}
+
+.rail{
+  position:absolute;
+  width:100%;
+  height:5px;
+  top:9px;
+  background:pink;
+  z-index:-1;
+}
+
+.fa-regular{
+  background:white;
+}
+
+.w95{ width:95%;}
+
+.w95-top{
+  border-top-right-radius:33px;
+}
+
+.w95-bottom{
+  border-bottom-right-radius: 33px;
+}
+
+.w95-top-right{
+  left:5%;
+  border-top-left-radius:33px;
+}
+
+.w95-bottom-right{
+  left:5%;
+  border-bottom-left-radius:33px;
+}
+
+.rad{
+  width:96px;
+  height:88.4px;
+  position:absolute;
+  top:30.0px;
+  border:5px solid pink;
+  border-radius: 11px;
+}
+
+
+.left{
+ border-style:none solid none none;
+}
+
+.right{
+  border-style:none none none solid;
+ }
+
+ .train{
+  color:white;
+ }
+
+ .t-pink{
+  color:rgb(192, 105, 119);
+ }
+
+ /* 1번차량 */
+
+ .t-red{
+  color:red;
+ }
+
+ /* 2번차량 */
+
+ .t-green{
+  color:green;
+ }
+ /* 3번차량 */
+
+ .t-black{
+    color:black;
+ }
+ /* 4번차량 */
+
+ #modal{
+  display:none;
+  position:fixed;
+  width:100%;
+  height:100vh;
+  top:0;
+  }
+
+  #modal_bg{
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    background:black;
+    opacity:0.5;
+  }
+
+ #bg{
+  position:relative;
+  width:300px;
+  height:150px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background:white;
+  border-radius:10px;
+ }
+
+
