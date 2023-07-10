@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="input">
+    줄 : <input type="number" id="row">
+    열 : <input type="number" id="col">
+  </div>
+  <button onclick="send()">만들기</button>
+
+</body>
+</html>
+<script>
+  function send(){
+    var result = opener.document.getElementById("myTable");
+    var row = document.getElementById("row").value;
+    var col = document.getElementById("col").value;
+
+    var out="";
+
+    out+="<table>";
+      for(var i=0; i<row; i++){
+        out+="<tr>"
+        for(var j=0; j<col; j++){
+          out+="<td></td>"
+        } 
+        out+="</tr>" 
+      }
+
+      //입력한 tr과 td를 나오게 하려면 반복문인 for문을 열어서
+      //테이블의 네모 칸을 만들게 해주는 것이다.
+      //전역변수 out에 넣어주기 위해
+      // var out="<table>" 요기 안에 반복문 열어주거out="</table>"
+      out+="</table>"
+
+      result.innerHTML=out;
+
+  }
+</script>
