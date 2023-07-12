@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+</head>
+<style>
+  *{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+  }
+  #wrap{
+    width:900px;
+    height:300px;
+    margin:40px auto;
+  }
+  #table{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    }
+    .sign{
+      height:100px;
+    }
+    #join_bt{
+      text-align:center;
+      margin-top:30px;
+    }
+
+</style>
+<body>
+    <div id="wrap">
+
+      <form name="joinf" id="joinf" method="get" action="join_save.html">
+      <table id="table">
+          <tr>
+            <td>아이디</td>
+            <td><input type="text" name="id" id="id"></td>
+          </tr>
+          <tr>
+            <td>비밀번호</td>
+            <td><input type="text" name="pw" id="pw"></td>
+          </tr>
+          <tr>
+            <td>이메일</td>
+            <td><input type="text" name="email" id="email"></td>
+          </tr>
+          <tr>
+            <td>연락처</td>
+            <td><input type="text" name="tel" id="tel"></td>
+          </tr>
+          <tr>
+            <td>생년월일</td>
+            <td><input type="date" name="birth" id="birth"></td>
+          </tr>
+      </table>
+      <div id="join_bt">
+        <a href="javascript:cancel();">취소</a>
+        <a href="javascript:check();">회원가입</a>  
+      </div>
+    </form> 
+    </div>
+
+     
+       
+    
+</body>
+</html>
+<script>
+  function check(){
+    var fm = document.joinf;
+    if(id.value==""){
+      alert("아이디를 입력하세요");
+      fm.id.focus();
+    }else if(fm.pw.value==""){
+      alert("비밀번호를 입력하세요");
+      fm.pw.focus();
+    }else if(fm.email.value==""){
+      alert("이메일을 입력하세요");
+      fm.email.focus();
+    }else if(fm.tel.value==""){
+      alert("연락처를 입력하세요");
+      fm.tel.focus();
+    }else if(fm.birth.value==""){
+      alert("생년월일을 입력하세요");
+      }else{
+        fm.submit();
+      }
+  }
+
+  function cancel(){
+    location.href="script_object3.html";
+    //location은 주소를 담당하는 객체이다
+  }
+</script>
