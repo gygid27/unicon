@@ -42,33 +42,31 @@
   color:#fff;
   background:#4b7000;
   display:inline-block;
-  padding:3px 10px;
+  padding:7px 15px;
   margin-left:15px;
   font-weight:900;
 }
 
 #slider{
-  margin: 15px 14px;
+  margin:15px 14px;
   position:relative;
   min-height:200px;
 }
-
 #slider .viewport{
   overflow:hidden;
   position:relative;
 }
-
 #slider .viewport .eventslide{
   display:flex;
   column-gap:20px;
   width:2496px;
-  }
-
-#slider .viewport  .eventslide .slide_item{
+}
+#slider .viewport .eventslide .slide_item{
   width:292px;
   overflow:hidden;
-
+  position:relative;
 }
+
 
 #slider .viewport  .eventslide .slide_item a h4{
     color:#690;
@@ -119,7 +117,24 @@
 
 #slider .direction-nav .next:hover   ,#slider .direction-nav  .prev:hover{
   background:#e68a00;
+  cursor:pointer;
 }
+
+#slider .viewport  .eventslide{
+  transform:translate3d(0px, 0px, 0px);
+  transition: transform 1s ease;
+  /*부드러운 효과를 위해 주는 것*/
+}
+
+
+
+/*
+  하나씩 슬라이드 이동 
+  ul태그에 position:relative; left:-312px;
+
+  한번에 이동
+  ul태그에  transform: translate3d(-936px, 0px, 0px); 주면서 
+*/
 
 
 
