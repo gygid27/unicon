@@ -40,7 +40,7 @@ a{
   width:120px;
   top:48px;
   left:50%;
-  margin-left:-590px;
+  margin-left:-633px;
   z-index:100;
 }
 
@@ -56,7 +56,7 @@ a{
   position:absolute;
   top:0;
   width:100%;
-  overflow: hidden;
+ 
 }
 
 #top_menu{
@@ -173,7 +173,99 @@ a{
 
 }
 
+#nav{
+  /*
+  -webkit-gradient(linear, left top, left bottom, color stop
+  (20%, rgba(0,0,0,0.6), to (rgba(0,0,0,0));
+  */
+  background:linear-gradient(rgba(0,0,0,0.6) 20%, rgba(0,0,0,0) 100%);
+  height:80px;
+}
+
+.main_menu{
+  display:flex;
+  color:white;
+  max-width:1000px;
+  margin:0 auto;
+  justify-content:space-between;
+  height:80px;
+  align-items: center;
+  font-size:18px;
+  font-weight:800;
+}
+
+
+.sub_block{
+  /* display:none; */
+  position:absolute;
+  display:flex;
+  top:80px;
+  width:1000px;
+  background:white;
+  color:rgba(0,0,0,0.7);
+  justify-content:space-between;
+  
+}
+.sub_block .sub_item{
+  padding:10px;
+  width:230px;
+}
+
+.main_menu .toplink .sub_block a{
+  color:rgba(0,0,0,0.7);
+  display:block;
+}
+
+.main_menu .toplink a{
+  color:white;
+}
+
+
+.main_menu .toplink{
+  position:relative;
+  padding:30px 0;
+}
+
+.main_menu .toplink .sub_block{
+  display:none;
+}
+
+.main_menu .toplink:hover  .sub_block{
+  display:flex;
+}
+
+.main_menu .toplink .sub_block a{
+  color:rgba(0,0,0,0.7);
+  display:block;
+}
+
+.main_menu:hover{
+  background:#fff;
+  color:#999;
+}
+
+.main_menu:hover .toplink a{
+    color:#999;
+}
+
+.main_menu .toplink .sub_block .sub_item h3{
+  color:#690;
+}
+
+
+
+
+
+
+
 
 #banner{
 
 }
+
+.slide_item img{
+  width:292px;
+  height:192px;
+  
+}
+
