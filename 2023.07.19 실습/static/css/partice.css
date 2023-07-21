@@ -4,3 +4,25 @@
   margin:0;
   padding:0;
 }
+
+/* 전체 폰트 넣기 */
+
+h1{
+  font-family:'Nanum Myeongjo', serif;
+}
+/* 타이틀 글씨 부분 폰트 넣기 */
+
+ body{
+  background:black;
+  position:relative;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+/* 스크롤를 부드럽게 올려주고 내려준다.
+a태그로 스크롤를 줄 때 사용가능  */
+
+#top_button{
+  position:
+}
