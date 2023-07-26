@@ -74,5 +74,35 @@ h1{
 #section3{
   grid-column:1/7;
   display:grid;
-  grid
+  grid-template-columns:repeat(6,140px);
+  justify-content:space-between;
+  align-items:center;
+}
+
+.icons{
+    align-self:start;
+    width:135px;
+    height:60px;
+    font-size:40px;
+    text-align:center;
+    color:grey;
+}
+
+#Clients{
+  align-self:end;
+  text-align:center;
+  grid-column:1/7;
+}
+
+#section4{
+  grid-column:1/7;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+
+}
+
+#My_services{
+  align-self:end;
+  grid-column:1/7;
+  text-align:center;
 }

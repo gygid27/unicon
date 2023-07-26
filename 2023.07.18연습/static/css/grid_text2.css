@@ -117,7 +117,7 @@ h1{
 }
 
 .logos{
-    align-self: self-start;
+    align-self:start;
     width:135px;
     height:60px;
     font-size:40px;
@@ -126,7 +126,7 @@ h1{
 }
 
 #Clients{
-    align-self: self-end;
+    align-self: end;
     text-align: center;
     grid-column: 1/7;
     justify-self: center;
@@ -140,7 +140,7 @@ h1{
 }
 
 #My_Services{
-    align-self:self-end;
+    align-self:end;
     grid-column: 1/7;
     text-align: center;
 }
