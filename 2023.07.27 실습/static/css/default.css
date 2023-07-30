@@ -1,0 +1,97 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+ul, ol{
+  text-decoration: none;
+  list-style-type:none;
+}
+
+#house_wrap{
+ width:1200px;
+ margin: 10px auto;
+ padding: 20px auto;
+ position:relative;
+}
+
+#header{
+ position:relative;
+  width:1000px;
+  margin:0 auto;
+  background-color: pink;
+}
+
+#hold_input{
+  position:relative;
+  width:1000px;
+  border: 5px solid black;
+
+
+}
+
+.item:nth-child(1) {
+  display:flex;
+  justify-content:center;
+}
+
+#wdate{
+  
+  padding:0 30px;
+  display:flex;
+  justify-content:center;
+}
+
+
+
+
+ 
+#hold_bt_wrap{
+   display:flex;
+   justify-content:center;
+  
+}
+
+#income_bt{
+    margin:10px;
+    font-size:30px;
+}
+
+#expense_bt{
+  margin:10px;
+  font-size:30px;
+
+}
+
+#write_bt{
+  margin:10px;
+  font-size:30px;
+}
+
+.hide{
+  display:none;
+}
+
+#hold_list_wrap{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+}
+
+#hold_list_wrap table thead tr th{
+  border:1px solid black;
+}
+
+#hold_list_wrap table{width:100%; font-size:10px;}
+.day{width:15%;}
+.income_money, .expense_money{
+  width:15%;
+}
+.detail{width:30%;}
+.category{width:15%;}
+.how{width:10%;}
+
+#left_t, #right_t{
+  border-bottom:1px solid black;
+}
