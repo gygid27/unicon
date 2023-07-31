@@ -1,0 +1,144 @@
+#main_top{
+    display:flex;
+}
+
+.top_left{
+    width:500px;
+    padding:20px;
+}
+
+
+.top_left img{
+    width:460px;
+}
+
+.top_right{
+    width:500px;
+    padding:20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item_title{
+    padding-bottom:30px;
+    border-bottom:1px solid grey;
+}
+
+.item_price{
+    flex-grow:1;
+    padding-top:30px;
+}
+
+.item_button button:first-child{
+    border:1px solid blanchedalmond;
+    color:black;
+    background:bisque;
+    width:200px;
+    height:50px;
+}
+
+.item_button button:last-child{
+    background-color:burlywood;
+    border:1px solid blanchedalmond;
+    color:black;
+    width:200px;
+    height:50px;
+}
+
+#main_content{
+    width:1080px;
+}
+
+.tab_title ul{
+    list-style-type:none;
+    width:100%;
+    border-top:2px solid black;
+    border-left:1px solid grey;
+    border-bottom:1px solid grey;
+
+}
+
+.tab_title ul li{
+    display:inline-block;
+    width:24.6%;
+    border-right:1px solid grey;
+    text-align: center;
+    padding: 15px 20px 14px 0;
+}
+
+.tab_title ul li:first-child{
+    border-bottom:1px solid white;
+    margin-bottom:-2px;
+
+}
+
+.detail_img{
+    width:780px;
+    margin:50px auto;
+
+}
+
+
+
+
+
+
+.main_title1{
+    flex-grow:1;
+}
+
+
+
+.main.content.main_content2{
+    align-self:flex-end;
+    display:flex;
+}
+
+.item_button{
+    display:flex;
+    justify-content:space-between;
+}
+
+#main_bottom{
+    margin-top:100px;
+    margin-bottom:100px;
+    width:1080px;
+    border-top:2px solid black;
+    padding-top:50px;
+    position:relative;
+}
+
+#main_bottom h3{
+    font-size:25px;
+    margin:10px 0;
+}
+
+.review_guide{
+    margin-bottom:20px;
+}
+
+.star_rating{
+    width:304px;
+}
+
+.star_rating, .star_rating span{
+    display:inline-block;
+    height:55px;
+    overflow:hidden;
+    background:url(../image/star.png)
+}
+
+.star_rating span{
+    background-position: left bottom;
+    line-height:0;
+    vertical-align: top;
+    width:100%;
+}
+
+.guide_btn{
+    position:absolute;
+    top:70px;
+    right:0;
+    color:blue;
+}

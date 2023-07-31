@@ -1,0 +1,187 @@
+<!-- ctrl + f 로 검색창을 띄워서
+  알고 싶은 기능을 검색해 보세요~! -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 총정리 파일</title>
+</head>
+<body>
+    <h1>머릿말, block 속성, 볼드체</h1>
+
+    <p>내용, block 속성</p>
+
+    <b>볼드체(두꺼운 글씨)</b>
+
+    <strong>역시 볼드체, 인터넷 검색에 유리함</strong>
+
+    <i>이탤릭, 기울어진 글씨, 아이콘 가져오기에도 사용</i>
+
+    <br>줄바꿈
+
+    <!-- <hr>가로줄(잘 안 씀) -->
+    
+    <!-- <blockquote>인용문, 들여쓰기처럼 나옴 (진짜 잘 안 씀)</blockquote> -->
+
+    <!-- <mark>형광펜 마킹 글자 (진짜 안 씀)</mark> -->
+
+    <!-- <sub>작은 글자 아래로 붙여서</sub> <sup>작은 글자 위로 붙여서</sup>
+        잘 안 쓰지만, 일단 기억은 해두기 -->
+    
+
+    <u>underline, 밑줄</u>
+
+    <s>가로선, 취소선</s>
+
+
+    <ul>unordered list => 숫자 없는 리스트
+        <li>리스트</li>
+    </ul>
+
+
+    <ol>ordered list => 숫자 있는 리스트
+        <li>리스트</li>
+    </ol>
+    
+
+    <dl>definition list => 용어 설명 리스트
+        <dt>용어 제목</dt>
+        <dd>용어 설명</dd>
+    </dl>=> 리스트 같은 게 붙진 않으나 들여쓰기가 자동으로 되어있음
+    <!--수업 때는 거의 사용하지 않았음-->
+
+
+    <input>
+    값을 입력하게 할 때 사용하게 되는 태그
+    text나 number 나 체크박스 등 다양한 속성이 있으며,
+    최댓값과 최소값, name 등 같은 것도 설정할 수 있음
+    예) <input type="number" name="age" min="0" max="100">
+        ㄴ 숫자만 입력 가능한 타입, 최소0에서 최대 100까지 입력 가능
+        <input type="checkbox"> 체크박스
+        <input type="radio"> 라디오 버튼
+        <input type="button"> 그냥 버튼
+        <input type="datetime-local"> 날짜 입력
+        <input type="file"> 파일 선택
+        <input type="submit"> 양식 전송
+        *이 외에도 많으니 필요할 때마다 검색하기
+
+
+
+    <img src="">
+    이미지를 표시할 수 있게 해주는 태그
+    <img src="https://img1.daumcdn.net/thumb/R1280x0/?fname=http://t1.daumcdn.net/brunch/service/user/duLL/image/ab5WFfaaivwUBcC7HyPUz6mYg28.jpg">
+    굳이 파일 첨부를 하지 않아도 해당 이미지의 인터넷 주소를 입력해주면 표시됨
+    
+
+
+
+    <label>여기에 감싸지면 클릭시 포함됨</label>
+    => <label><input type="radio">항목</label>
+        ㄴ> input을 정확히 누르지 않아도 되게 할 수 있음
+
+
+    
+    선택창
+    <select name="" id="">
+
+        <option value=""></option>
+        선택창 안에 들어갈 옵션들을 이걸로 감싸줌
+    
+    </select>
+
+
+
+    *테이블(중요)
+    <table>
+        <tr> 가로 1번 줄(table row)
+            <td>가로 1번 줄에 첫 번째 칸</td>(table data)
+            <td>가로 1번 줄에 두 번째 칸</td>(table data)
+        </tr>
+        <tr> 가로 2번 줄(table row)
+            <td>가로 2번 줄에 첫 번째 칸</td>(table data)
+            <td>가로 2번 줄에 두 번째 칸</td>(table data)
+        </tr>
+    </table> 
+
+
+    div(중요) => division 분할
+    <div>block 속성, 그 외에 뭐든 담을 수 있음</div>
+    
+
+    span
+    <span>inline 속성</span>
+
+
+    block / inline-block / inline 속성 설명
+    block = 좌우 전체 차지, 상하좌우 크기 설정 가능
+    inline = 크기 설정 불가능, 안에 든 글자들 숫자에 따라 크기가 달라짐, 꾸미기 용도로 사용됨
+    inline-block = 글자에 따라 크기가 달라지고 + 좌우 크기 설정 가능함
+
+
+
+    form 태그
+    <form id="joinForm" action="join.jsp" method="get" enctype="multipart/form-data">
+    action = 지정한 파일로
+    method = 데이터를 보내는 방식
+    enctype="multipart/form-data" => 파일을 쪼갰다가 다시 합치는 방법으로 할
+    ㄴ 위의 내용들은 아직 제대로 배우지 않음
+
+
+
+
+    *id
+    <태그 id="아이디 이름"></태그>
+    id => 무조건 하나의 태그만을 가리키는 말임
+
+    *class
+    <태그 class="클래스 이름"></태그>
+    class => 여러 개의 태그를 가리킬 수 있는 말임
+
+
+    
+
+    * html 태그 작성 팁
+
+    <태그></태그>
+
+    이후
+
+    <태그>
+        (엔터 2번)
+    </태그>
+
+    이후
+
+    <태그>
+        <태그></태그> (빈 공간에 새 태그 만들기)
+    </태그>
+
+    방식으로 작업
+
+    이유 => 자동으로 들여쓰기가 되어 구분이 편리
+
+            * 여기서 말하는 들여쓰기는 글쓰기의 그것과 다름
+            글쓰기에서의 들여쓰기는 문단의 시작을 띄어쓰기 해서 구분해주는 것이지만
+            코딩에서의 들여쓰기는 누가 누구의 부모이고 자식인지 구분해주는 용도임
+            ㄴ(따라서 첫 문장 시작 전에 굳이 탭 키나 스페이스 바를 여러 번 눌러줄 필요는 없음!)
+
+
+
+    예시
+    <div>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    ㄴ div 안에 ul
+       ul 안에 li가 있음을(부모자식관계)
+       세로줄을 통해서 바로 확인할 수 있음
+
+</body>
+</html>

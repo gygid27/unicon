@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    // 순향이가 사과 10개,  순호가 딸기 5개,  순겸이가 배 15개 있다.
+    // 세 사람이 가지고있는 과일은  총 몇개인지 출력
+    // 각 사람마다 변수지정해서 하시오!
+
+    // var hyang_apple = 10;    
+    // var ho_strawberry = 5;
+    // var gyeom_pear = 15;
+
+    // document.write("<div> 총 과일의 갯수는 :"+(hyang_apple+ho_strawberry+gyeom_pear)+"</div>")
+
+    // 밑변 15, 높이 20을 가지는 삼각형의 넓이를 구하여 출력하시오.
+    // 출력결과는  ->   밑변:15  높이:20
+    //                 삼각형의 넓이:150
+    // var width = 15;
+    // var height = 20;
+
+    // document.write("<div> 밑면 :" +width+ " 높이 :" +height+"<br>"+
+    //     "삼각형의 넓이 : "+(width*height/2))
+
+    // 숙제 반지름이 r인 원이 있다. 이 원의 넓이와 둘레를 구하여 출력
+    
+    // var r = 5;
+    // var a = 3.14
+
+    // document.write("원의 넓이는 : " +(r*r*a)+"이다.")
+    // document.write("원의 둘레는 : " +(2*a*r)+"이다.")
+
+// 문제 1.
+// 반지름이 r인 원형 트랙이 있다. 
+// 원형 트랙위로  자동차한대가 달리고있다.
+//  자동차는 시속 v로 달리고 있다.
+//  자동차가 트랙을 한바퀴 완주하는데 몇분이 걸리는가??
+// $$ 속도와 거리와 시간의 관계에대한 공식을 찾아 보시길!!
+//  반지름과 속도를 입력하여  출력하시오! 
+//  거리 = 속도*시간;
+//   속도 =  거리/시간;
+//  시간 = 거리/속도;
+//거리값을 구해야 시간을 구할 수 있다
+//이거 다시 질문!!!!!!!!!!!!!!!!!!!!!!!!
+
+// var r = parseInt(prompt("반지름의 원형 트랙"))
+// var v = parseInt(prompt("자동차의 속도"))
+
+// var dist = r*2*3.14;
+// var time = dist / v;
+
+// document.write("완주하는 데 걸리는 시간은 : " +(time*60)+" 분")
+
+ // 바이킹을 타는데 키가 150이상만 탈수 있다.
+    // var tall = 160 
+    //     document.write("나의 키는 : " +(tall>=150)+" 입니다.")
+
+    
+    // var 포카리=2100, var 오렌지주스1.5 = 3400, var맥주피쳐 = 5100
+    // 나의  var money = 5000원을 기준으로
+    
+    
+
+    // 바이킹 탑승 조건 키 150 이상
+    // var tall = parseInt(prompt("나의 키는"));
+    // var result = (tall>=150) ? "탑승가능" : "탑승불가능";
+
+    // document.write(result);
+
+
+    // 내시력이 1.0이상이면  좋은 눈을 가지고있군요 라고 출력
+    //         1.0미만이면 검사를 받아보는게....
+
+        // var eye = parseInt(prompt("당신의 시력 상태는?"));
+        // var result = (eye >= 1.0) ? "눈 시력 양호 상태" : "눈 시력 위험 상태";
+
+        // document.write(result);
+
+
+
+        
+   // 주차장 기본요금이 1000원이다.
+// 1시간 지나면 500원 추가 요금 있다.
+// 2시간 지나면 1000원 추가 요금 있다.
+// 주차 시간을 분으로 입력하여  주차요금 얼마를 지불해야 하는가 출력    
+
+    // var time = parseInt(prompt("주차시간 (분)"));
+    // var cost = 1000;
+    // var result = (time>60) ? cost+500 :cost;
+    // var result = (time>120) ? result+1000 : result;
+
+    // document.write("총 주차비용은 : " + result);
+
+
+    // 동전 앞면 뒷면
+    // var coin = Math.floor(Math.random()*2);
+    // var chioce = parseInt(prompt("1.앞면,2.뒷면"));
+    // var result = (coin == chioce) ? "정답" : "실패"
+    // document.write("결과는? : "+result);
+
+    // 주사위의 값이 5보다크면 승리라고 출력 아니면 패배라고 출력
+    // var dice = Math.floor(Math.random()*6)+1;
+    // var result = (dice>5) ? "승리" : "패배";
+    // document.write("주사위의 결과는 : "+result);
+
+
+    // 오늘의 과제
+//  주사위 문제
+//  주사위 2개를 던진다.
+//  주사위의 합이 7이상이면 승리, 아니면 패배
+// 단, 주사위 2개의 숫자가 모두 같은 숫자라면 승리
+// 주사위 2개가 1,1, 나왔다면 승리, 2,2 나와도 승리....
+
+        // var dice1 = Math.floor(Math.random()*6)+1;
+        // var dice2 = Math.floor(Math.random()*6)+1;
+        // var sum = dice1+dice2;
+
+        // var result = (sum >= 7) ? "승리" : "패배";
+        // var result = (dice1 == dice2) ? "승리" : result;
+
+        // document.write(result);
+
+
+// A 유형 문제
+// 가위바위보 하기
+// 컴퓨터와 가위바위보 게임하기
+// 1. 가위  2. 바위 3. 보
+// 컴퓨터 랜덤값으로 1~3 중에 나오는 값고 내가 입력한 값 비교하여
+// 내가 이겼는지 비겼는지 패배 하였는지 출력하기
+
+//어디가 틀렸는지 알아보기
+
+    // var com = Math.floor(math.random()*3)+1;
+    // var user = parseInt(prompt("1.가위 2.바위 3.보"));
+    // var result = (user==com) ? "비김" : "패배";
+    // var result = ((user==1&&com==3) ||(user==2&&com==1) || (user==3&&com==2)) ? "이김" : result;
+
+    // document.write(result);
+
+    // <과제>
+
+    // 1. 도형 입력하기(  정사각형, 직각사각형, 원형)
+    // 2. 배경색 입력하기 ( 빨강, 파랑, 노랑, 핑크)
+    // 3. 너비크기 입력하기 (100px 이상 입력, 원형을 선택한경우 너비는 반지름)
+    // 4. 높이 입력하기(100px 이상 입력, 원형을 선택한 경우 높이는 패스)
+    // 5. 정사각형 이라고 도형 입력했을경우  너비와 높이는 같아야 한다.
+    // 6. 화면에 도형 출력하기
+    
+
+    var shape = parseInt(prompt("정사각형, 직사각형, 원형 중에 고르시오"))
+    var color = parseInt(prompt("빨간색, 파랑색, 노랑색, 핑크 중에 고르시오"))
+    var height = parseInt(prompt("높이는 100px 이상 입력하시오"))
+    var  width = parseInt(prompt("너비를 100px 이상 입력하시오"))
+
+    if(shape == shape1){
+        document.write("<div class=shape1></div>" );  }
+
+    else if(shape == shape2){
+        document.write("<div class=shape2></div>" ); 
+    }
+    
+    else if(shape == shape3)
+        { document.write("<div class=shape3></div>");}
+
+    
+    if(color == red){
+        document.write("<div class = red></div>");
+    }
+    
+    else if (color == blue){
+        document.write("<div class = blue></div>");
+    }
+
+    else if (color == yellow){
+        document.write("<div class = yellow></div>");
+    }
+
+    else if (color == pink){
+        document.write("<div class = pink></div>");
+    }
+
+    if (height >100){
+            document.write()
+    }
+
+    if(width>100){
+
+    }
+    
+
+
+
+    </script>
+</head>
+<body>
+    <style>
+        .shape1{
+            width:200px;
+            height:100px;
+            }
+        .shape2{
+            width:200px;
+            height: 200px;
+        } 
+        
+        .shape3{
+                border-radius: 100%;
+        }
+
+        .red{
+            background-color: red;
+        }
+
+        .blue{
+            background-color: blue;
+        }
+
+        .yellow{
+            background-color: yellow;
+        }
+
+        .yellow{
+            background-color: pink;
+        }
+    </style>
+    
+</body>
+</html>

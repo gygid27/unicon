@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function input(){
+            //alert("동작") ->4번 조건            // let js = 0; // 지역함수  해당 함수에서만 사용 가능
+            var num=document.getElementById("num").value;
+            num=Number(num);
+            var res=document.getElementById("result").innerHTML = num*num;
+            // var res=document.getElementById("result").innerHTML = number(num*num); -> 상수오라버니;
+            //alert(typeof(num));
+                                        
+        }
+
+    </script>
+
+</head>
+<body>
+    <input type="text" id="num"><br>
+    <button onclick="input()">제곱하기</button>
+    <div id="result"></div>
+</body>
+</html>

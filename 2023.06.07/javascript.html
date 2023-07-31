@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+// "", '' 는 문자열을 뜻한다. 문자열은 숫자가 아니다.
+/* 암묵적으로 ''이거는 고유대명사? 같은거 사용할 때, 또는
+변하지 않는 문자열사용할때
+
+변수 - 데이터가 저장되어있는 메모리 공간
+자바스크립트에서 변수의 공간에 어떠한 데이터라도 저장할 수 있다.
+
+=대입 연산자이다. 컴퓨터 언어에서는 대입연산자라고 한다.
+(한쪽에 있는 것을 반대로 넘겨준다)
+대입연산자는 오른쪽의 값을 왼쪽에 저장.
+== , ===비교연산자*/
+
+// variable(변수) = var
+// 한글로 써도 되지만 한국어를 지원하는 곳에만 쓸 수 있다.
+//첫글자는 무조건 영어로 써야 한다. 빨간 밑줄은 문제가 있는 것, _만 사용 가능 대소문자 구별해서 사용해야 함
+// 이름은 개발할때 목적과 의미있게 만들어야 한다. 
+
+
+var number=10; 
+//number라는 변수에 10를 대입했다.
+
+document.write("<b>"+number+"</b><br>");
+//변수이름 호출
+
+var width=40;
+var height=160;
+
+document.write( width*height);
+
+
+
+number='aaa';
+document.write("안녕 나는 자바스크입트야 반갑지?<br>");
+document.write("1+1");
+document.write("사과 먹었다<br>");
+
+
+var apple=10;
+var strawberry=5;
+var pear=15;
+
+document.write("<div> 과일은 총 " +(apple+strawberry+pear)+"개 이다.</div>");
+
+var width=15;
+var height=20;
+// 밑변 15, 높이 20을 가지는 삼각형으이 넓이를 구하여 출력하시오.
+
+document.write("<div>밑변:" +width+" 높이: "+height+"<br>"
+    +"삼각형의 넓이 " +(width*height/2)+"</div>")
+
+var tall=180;
+var my_tall ="나의 키는 "+tall;
+document.write(my_tall);
+
+
+
+my_tall = "예림이 키는 "+160;
+document.write(my_tall);
+
+var num1=10;
+var num2=30;
+// num1+num2 , num1-num2, num1*num2, num1/num2
+document.write("<br><br>");
+document.write( num1/num2 +"<br>"); //몫을 의미
+document.write( num1%num2 + "<br>"); //나머지를 의미한다.
+
+// 숙제 반지름이 r인 원이 있다. 이 원의 넓이와 둘레를 구하여 출력
+
+var r= parseInt(prompt("반지름을 입력하시오"));
+//prompt함수는 브라우저에서 입력창을 제공하는 기능을 가지고 있다.
+//prompt로 입력한 내용은 반드시, 무조건! 문자열이다.
+//문자열 → 숫자 변환하는 방법 : number(), parseInt()
+// 데이터의 타입을 알고싶은 경우 : typeof() 를 사용하면된다.
+//number() : 숫자만 있는 문자열인 경우에 변환가능
+//parseInt() : 숫자와 문자가 섞여있어도 변환 가능 문자열의 앞쪽에있는 숫자만 변환 해준다.
+// 데이터의 타입을 알고싶은경우 : typeof()  를 사용하면된다. document.write(  typeof(r) );
+
+
+
+
+document.write(  typeof(r) );
+
+var r=5;
+var a=3.14;
+document.write("<div>원넓이 공식:"+(a*r*r)+"<br>"
+    +"원둘레 공식:"+(2*a*r)+"<div>")
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

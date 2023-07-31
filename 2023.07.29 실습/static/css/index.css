@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&display=swap');
+
+*, *:before, *:after{
+    box-sizing:border-box;
+}
+
+/* 가상요소란? html태그로 표현하기 어려운
+콘텐츠의 특정 부분만 동적으로 선택하거나 html 콘텐츠 내용을
+변경하지 않고도 선택한 요소의 앞:before 뒤:after에 
+새로운 컨텐츠를 추가하는 기능을 하는 키워드로 있다.
+::before은 요소 내용 앞쪽에 새 컨텐츠를 추가 및 변경
+::after는 요소 내용 뒤쪽에 새 컨텐츠를 추가하는 것
+
+
+사용하는 방법
+
+선택자::가상요소{
+    속성:속성 값
+    속성 값을 가져오는 attr()값이다.*/
+
+body, h1,h2,h3,h4,h5,h6, p, ul, ol, li, dd, dt{
+    margin:0;
+    padding:0;
+}
+
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+    /* a태그에 inherit를 주면 부모의 객체값을 가져오는 것이다.
+        기본값으로 블랙이 되는 것*/
+}
+
+
+#wrap{
+    max-width:1080px;
+    width:90%;
+    margin:0 auto;
+
+}
+
+#header{
+    position:sticky;
+    background-color:#A65D6A;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+    padding: 7px 20px;
+    /* border-bottom:1px solid red; 
+    header부분에 선을 넣어줄 땐 border-botton로 css주기*/
+}
+
+.header_logo{
+    width:100px;
+}
+
+.header_nav{
+    display:flex;
+    align-items:center;
+}
+
+.header_nav a{
+    margin-left:15px;
+}
+
+.header_nav a:nth-child(2){
+    display:flex;
+    align-items:center;
+    padding:7px 17px;
+    background-color:#D9B4B4;
+    border-radius: 7px;
+}
+
+#main{
+    padding:15px 0;
+    background-color:#D9B4B4;
+    
+}
+
+#flex{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    column-gap:20px;
+    row-gap:20px;
+}
+
+/* .product_img{
+    display:flex;
+    flex-direction:row;
+} */
+
+.product_img{
+    display:flex;
+    flex-direction:column;
+    width:300px;
+}
+
+
+
+.flexitem{
+    max-width:300px;
+    border:1px solid black;
+    border-radius:10px;
+    overflow:hidden;
+    width:30%;
+    
+}
+
+.pro_content{
+    display:flex;
+    justify-content:space-between;
+    padding:7px;
+}
+
+.pro_info{
+    font-size:13px;
+}
+
+.like{
+    align-self: flex-end;
+}
+
+@media screen and (max-width:768px){
+    .title{
+        color:white;
+    }
+
+    #flex{
+        column-gap:15px;
+    }
+
+    .flexitem{
+        width:40%;
+    }
+}
+
+@media screen and (max-width:576px){
+    .flexitem{
+        width:75%;
+    }
+}
+
+
+
+
+
+
+

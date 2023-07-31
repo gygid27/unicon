@@ -1,0 +1,200 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+}
+
+#wrap{
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows:140px 100px 680px 400px 550px 280px  200px;
+    justify-content:center;
+    margin:0 auto;
+    width:960px;
+}
+
+#nav{
+        width:100%;
+        background-color:green;
+        grid-column:1/7;
+        height:30px;
+        position:sticky;
+        top:0;
+}
+
+h2{
+    font-size:20px;
+}
+
+#section{
+    display:grid;
+    grid-column: 1/7;
+    grid-template-columns: 5fr 3fr;
+    /* 2:8가르마 처럼 생각하기
+    5:3으로 생각하기 이걸 해줘야 나란히 가능 */
+    align-items:center;
+    /* 이거로 나란히 정돈하기 */
+
+}
+
+#title{
+    grid-column:1/7;
+    display:grid;
+    font-size:20px;
+    justify-content:space-between;
+    align-self:center;
+    font-weight:100;
+    align-items:center;
+    grid-template-columns: 1fr 1fr;
+}
+
+#title i{
+    justify-self:right;
+    font-size:40px;
+}
+
+
+
+#menu_list ul{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    list-style-type:none;
+
+}
+
+#menu_list ul li:nth-child(1){
+    text-decoration: underline;
+    text-underline-offset:5px;
+}
+
+#section1{
+    grid-column:1/7;
+    display:grid;
+    grid-template-columns:repeat(3,300px);
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-between;
+    /* justify-content: space-around; */
+    align-items: center;
+}
+
+.picture{
+    width:300px;
+    height:300px;
+}
+
+
+.picture:nth-child(1){
+    background: url(../image/pic1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.picture:nth-child(2){
+    background: url(../image/pic2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.picture:nth-child(3){
+    background: url(../image/pic3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.picture:nth-child(4){
+    background: url(../image/pic4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.picture:nth-child(5){
+    background: url(../image/pic5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.picture:nth-child(6){
+    background: url(../image/pic6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#section2{
+    grid-column: 1/7;
+    display:grid;
+    grid-template-columns : (6, 140px);
+    justify-content: space-between;
+    align-items: center;
+    gap:10px 20px;
+}
+
+.logo{
+    align-self:start;
+    width:135px;
+    height:60px;
+    font-size:40px;
+    text-align:center;
+    color:black;
+
+}
+
+#client{
+    align-self: end;
+    text-align: center;
+    grid-column: 1/7;
+    justify-self: center;
+    height:100px;
+    padding:20px;
+}
+
+#section3{
+    grid-column: 1/7;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+}
+
+#Myservice{
+    align-self:end;
+    grid-column: 1/7;
+    text-align: center;
+}
+
+#section4{
+    background-color:black;
+    grid-column:1/7;
+    display:grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.portrait{
+    background: gray;
+    width:80px;
+    height:80px;
+    border-radius: 100%;
+    justify-self: center;
+    align-self:center;
+}
+
+#section4 p{
+    justify-self: center;
+    align-self:start;
+}
+
+#footer{
+    display:grid;
+    align-items: center;
+    grid-column:1/7;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.sns{
+    display:grid;
+    justify-content: space-between;  
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+}

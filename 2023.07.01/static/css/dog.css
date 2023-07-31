@@ -1,0 +1,76 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+#section{
+    margin-top:10%;
+    /* 10%는 아래로 많이 내려가고
+    10px은 조금식 내려가는 걸 의미 */
+    width:100%;
+    height:1080px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    /*열을 1:1 로 둔다*/
+    grid-template-rows: 100px 800px;
+    /*가로 줄을 100px 800px로 준다 */
+}
+
+.center{
+        border-bottom: 1px solid black;
+}
+
+#head{
+    grid-column: 1/3;
+    text-align:center;
+    /*글씨의 수직을 중간에 둔다 */
+    line-height: 100px;
+    /*텍스트 라인의 높이를 지정해준다.*/
+    font-size:50px;
+    font-weight:900px;
+    border-bottom:1px solid black;
+}
+
+
+
+#pic_left{
+    border-right:1px solid black;
+}
+
+/*여기까지가 양쪽 네모모양 만드는 방법이다 */
+
+#pic_left_name{
+    border-right:transparent;
+    /*오른쪽 테두리에 투명한 색상을
+    적용한다는 의미
+    transparent는 투명한 색상을 의미한다.
+    */
+}
+
+#pic_left:hover, #pic_right:hover{
+        cursor:pointer;
+}
+
+#final{
+    margin-top:10%;
+    background-color:pink;
+    width:100%;
+    height:800px;
+    display:none;
+    /*요소를 안보이게 설정한다.
+    보통 자바스크립트에서 요소를
+    숨기거나 다시 보여줄 때 사용하고
+    숨겨져 있을 때 공간을 차지 하지
+    않는다. */
+    position:absolute;
+    /*위치기준이 body의 기준점이
+    기준 위치가 돠는 것이다. */
+    top:100px;
+
+}
+
+/*final은 왼쪽오른쪽의  큰 틀에  포함되므로 전체 부분을  꾸며주는
+곳이다. */
+
+
