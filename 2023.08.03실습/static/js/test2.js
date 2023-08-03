@@ -10,8 +10,8 @@ $(function(){
 
 $(".name").click(function(){
   var id = $(this).data("id");
-  $.getJSON("http://jsonplaceholder.typicode.com/user?id="+id,function(data){
-    data =data[0];
+  $.getJSON("http://jsonplaceholder.typicode.com/users?id="+id,function(data){
+    data = data[0];
   //객체는 키로 쓴다.
     $("#info_name").text(data.name);
     $("#info_username").text(data.username);
