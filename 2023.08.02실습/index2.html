@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<script>
+   //JSON --> javascript object notion 자바스크립트 객체 표기법 자바스크립트 객체를 문서화 하는 것  .JSON
+   // 0과1로 저장되어 있는 데이터를 변환시켜 보여주는  변화시켜주지 않는 것은 열람할 수 없다.
+   //데이터만 저장되는 공간이기 때문에 주적처리는 할 수 없다.
+
+   //script와 JSON은 엄연히 다른 것이기 때문에 script에다가 넣어주면 안됌
+
+   //자바스크립트 객체만드는 법
+   // i={ name:"김승겸" }  --1
+
+   // function person(name,age){
+   //   this.name=name;
+   //    this.age=age}  --2
+
+   // a = new object();
+   // a.name="상수"; --3
+
+let 정예림 = { age:23,  coffee:"아아" , keyboard:"동그라미키", blanket:"zebra"};
+//어떻게 변환시켜주는가
+
+var j = JSON.stringify(정예림);
+
+console.log(정예림);
+console.log(j);
+//콘솔로 확인하는 것이다. 화면에 안나오는 게 맞음
+console.log(JSON.parse(j));
+
+//JSON.parse 는 자바스크립트 객체로 표현되는 것
+
+let jdata="";
+
+// a=["김선향", "왕왕최고"]
+//20살 이상중 삼성 노트북을 사용하는 ㅅ람 만 출력
+
+$(function(){
+  $.getJSON("./test_json.json",function(data){
+    console.log(data);
+    // $("#list").html("<td><td>"+data.person[0].name+"</td><td>"+data.person[0].notebook+"</td><td>"+data.person[0].age+"</td></tr>");
+
+    $.each( data.person, function(i, item){ // i는 배열의 인덱스, item은 배열의 각 공간 p[1] == item
+      if(parseInt(item.age/10)==2){
+
+        $("#list").append("<tr><td>"+item.name+"</td><td>"+
+          item.notebook+"</td><td>"+item.age+"</td></tr>");
+      }
+
+    } );
+    //배열을 다룰때 사용하는 반복문
+    // .each를 통해서 index표기를 안하면서 간단하게 사용 가능
+    //꼭!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 기억하기
+
+    $.each( data.person, function(i, item){ // i는 배열의 인덱스, item은 배열의 각 공간 p[1] == item
+      if( item.age>=20 && item.notebook==="삼성" ){
+        $("#list").append("<tr><td>"+item.name+"</td><td>"+
+          item.notebook+"</td><td>"+item.age+"</td></tr>");
+      }
+
+    } );
+
+  });
+});
+
+
+   
+</script>  
+</head>
+<body>
+    <table id="list">
+
+    </table>
+
+  
+</body>
+</html>
