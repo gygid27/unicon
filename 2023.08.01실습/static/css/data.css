@@ -1,0 +1,38 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+table{
+  border-collapse: collapse; 
+  width:100%;
+  font-family:arial, sans-serif;
+  }
+
+th,td{
+  border:1px solid grey;
+  text-align:center;
+  padding:8px;
+
+}
+
+tr:nth-child(even){
+  background:grey;
+}
+
+#wrap{
+  width:800px;
+  margin:50px auto;
+  
+}
+
+#search_wrap{
+    padding:10%;
+  }
+
+ #search_word{
+    width:50%;
+    height:40px;
+    padding:3px 10px;
+  }

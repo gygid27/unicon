@@ -1,0 +1,46 @@
+/*
+ui 자유롭게 꾸미기
+
+input에 입력한 테스트 포함하는 이미지 검색할 수 있게 만들기
+*/
+
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+#wrap{
+  width:1000px;
+  margin:20px auto;
+}
+
+#search_wrap{
+  display:flex;
+  justify-content: center;
+  padding:0 30px;
+  margin:30px 40px;
+  font-size:30px;
+}
+
+
+
+#keyword{
+  padding:0 30px;
+  margin:0 10px;
+}
+
+#data_list{
+  display:flex;
+  flex-wrap:wrap;
+  row-gap:10px;
+  
+
+
+}
+
+.data{
+  list-style-type: none;
+}
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+  *{box-sizing: border-box;}
+  #box{
+    width:500px;
+    margin:0 auto;
+    border:1px solid #ddd;
+    border-radius: 10px;
+    padding:15px 20px;
+    background:#eee;
+  }
+  #box h3{margin-bottom:10px;}
+  .boxing{
+    display:flex;
+    flex-wrap:wrap;
+    column-gap: 10px;
+    row-gap:10px;
+  }
+  .item{
+    border:1px solid #ddd;
+    width:223px;
+    height:300px;
+    border-radius: 10px;
+    background:#fff;
+  }
+</style>
+</head>
+<body>
+  
+  <div id="box">
+      <h3>위젯보드</h3>
+      <div class='boxing'>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+      </div>
+  </div>
+
+</body>
+</html>
