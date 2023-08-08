@@ -1,0 +1,107 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+#wrap{
+    width:1000px;
+    margin:0 auto;
+    position:relative;
+}
+
+#header{
+    padding:20px 0;
+    width:100%;
+    position:relative;
+}
+
+#search_box{
+    width:100%;
+    padding:0 200px;
+    padding-bottom:10px;
+    border-bottom:2px solid black;
+}
+
+#search_box .searchInput{
+    display:flex;
+    height:30px;
+    font-size:17px;
+    width:100%;
+    border:1px solid #bbb;
+    border-radius:10px;
+    padding:0 10px;
+    justify-content:space-around;
+    align-items:center;
+}
+
+#searchWord{
+    border:0;
+    outline:none;
+    height:100%;
+    width:100%;
+}
+
+#searchFilter{
+    position:relative;
+    width:100%;
+    padding:20px 50px;
+}
+
+#searchFilter .filterMore{
+    text-align:center;
+    position:relative;
+    font-size:25px;
+    cursor:pointer;
+}
+
+#searchFilter .searchdetail{
+    width:100%;
+    position:relative;
+}
+
+#searchFilter .searchdetail h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+#detailbox{
+    width:100%;
+    position:relative;
+    border:1px solid black;
+}
+
+#detailbox{
+    width:100%;
+    position:relative;
+    border:1px solid black;
+}
+
+#detailbox .detailList{
+    border:1px solid black;
+    display:flex;
+    align-items:center;
+    border-bottom:2px solid rgb(18, 17, 17);
+}
+
+#detailbox .detailList .itemDt{
+    align-self:stretch;
+    display:flex;
+    align-items:center;
+    padding-left:10px;
+    width:140px;
+    background-color:lightgreen;
+    color:black;
+}
+
+#detailbox .detailList .itemDd{
+    width:760px;
+    padding:13px 8px;
+}
+
+.itemDd:nth-child(2) .itemDd:nth-child(3){
+    display:flex;
+    flex-wrap:wrap;
+    column-gap:20px;
+    row-gap:5px;
+}
