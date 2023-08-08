@@ -1,0 +1,22 @@
+
+#box{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+    
+    
+}
+
+.com img, .user img{
+    width:30px;
+    
+    
+    
+}
+
+.com p, .user p{
+        display:flex;
+        align-items:center;
+}
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 마지막</title>
+</head>
+<style>
+        #tt01{  border-collapse:collapse}
+
+      
+
+
+        
+        .line2,.line8{ 
+            border:1px solid black;
+            width:100px;
+            height:200px;}
+
+        .line4,.line6{
+            border:1px solid black;
+            width: 200px;
+            height:100px;
+        }
+        .line2:hover{
+            background:pink;
+
+        }
+        .line8:hover{
+            background:yellow;
+        } 
+        .rightMemo{
+            display:none;
+        }
+
+        .line6:hover .rightMemo{
+            display:block;
+        }
+        .brother2{ 
+                opacity:0;}
+        .brother1:hover ~ .brother2{ opacity :1 }
+        
+        /*.right:hover .rightMemo-부모를 의미한다.
+         .brother1:hover ~ .brother2{ opacity : 1 }-형제관계 */
+
+
+
+            
+
+
+        
+            
+
+
+
+
+
+
+</style>
+<body>
+    <table id="tt01">
+    <tr>
+        
+        <td ></td>
+        <td class="line2"></td>
+        <td ></td>
+
+    </tr>
+    <tr>
+        <td class="line4"></td>
+        <td ></td>
+        <td class="line6">
+<p class="rightMemo">
+            나는 오른쪽 입니다.
+            오른쪽은 오른손잡이가 수저를 먹을 때 사용합니다.
+        </p>
+
+        </td>
+        
+
+    </tr>
+    <tr>
+         <td></td>
+         <td class="line8">
+            <h3 class="brother1">여기에 마우스 놓아줘!</h3>
+            <h5 class="brother2">타자 연습해야겠어 너무 느려~</h5>
+         </td>
+         <td></td>
+
+
+
+    </tr>
+    </table>
+    
+</body>
+</html>

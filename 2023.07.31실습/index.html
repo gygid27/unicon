@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <!--그 누구보다도 높게쓰는 것이 좋음-->
+
+<script>
+    window.onload=function(){}
+
+    //$(document).ready(function(){})
+    $(function(){
+        // document.getElementById().innerHTML="<b>그려안그려?</b>";
+        // document.querySelector().innerText="<b>기여아니여</b>"; 기존의 방법
+        $("#box1").html("<b>보이기</b>");
+        //html은 꼭 소문자로 적어주세요
+        //$("#box1").text();
+
+        // var d = docuemt.getElementById("box1");
+        // d.addEventListener("click",function(){});
+
+        // $("#box1").on(function(){
+
+        // })
+        //적게 사용하는 이벤트는 on으로 쓴다.
+
+        
+
+        $("#box1").click(function(){
+            $("#box2").toggle(2000);
+
+            //$("#box2").show(5000);
+            // alert("나 클릭당했나?");
+           //$("#box2").hide(3000);--> 해당태그 감추기
+            //hide는 display:none;을 주는 것이다.
+        })
+        //많이 사용하는 이벤트는 click로 쓰고 
+
+    })
+</script>
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #box1{width:100px; height:100px; background:pink;}
+        #box2{width:100px; height:100px; background:rebeccapurple;
+                display:none;}
+    </style>
+    
+    <div id="box1"></div>
+
+    <div id="box2"></div>
+
+    <style>#box3{width:100px; height:100px; background-color:lightslategray;}</style>
+    <fieldset>
+        <legend>fade</legend>
+        <button id="fade_out">out</button>
+        <button id="fade_in">in</button>
+        <button id="fade_toggle">toggle</button>
+        <div id="box3"></div>
+
+    </fieldset>
+    <script>
+        $("#fade_out").click(function(){
+            $("#box3").fadeOut(2000);
+        });
+
+        $("#fade_in").click(function(){
+            $("#box3").fadeIn();
+        });
+
+        $("#fade_toggle").click(function(){
+            $("#box3").fadeToggle();
+        });
+    </script>
+
+    <style>#box4{width:300px; height:300px; background-color:deepskyblue; display:none;}</style>
+    <fieldset>
+        <legend>slide</legend>
+        <button id="slide_down">펼쳐라</button>
+        <button id="slide_up">닫아라</button>
+        <button id="slide_toggle">펼닫</button>
+        <div id="box4"></div>
+    </fieldset>
+    <script>
+        $("#slide_down").click(function(){
+            $("#box4").slideDown(3000);
+        });
+        $("#slide_up").click(function(){
+            $("#box4").slideUp();
+        });
+        $("#slide_toggle").click(function(){
+            $("#box4").slideToggle();
+        })
+    </script>
+    
+</body>
+</html>

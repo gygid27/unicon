@@ -1,0 +1,399 @@
+/*ctrl + f 로 검색창을 띄워서
+  알고 싶은 기능을 검색해 보세요~!*/
+
+
+
+<단위>
+
+(수업에서 자주 썼던 것)
+px : 픽셀 / 절대적인 단위
+% : 부모에서 정한 절대적 px단위의 몇%;
+vh : 화면(view)의 높이(height)
+vw : 화면(view)의 넓이(width)
+
+(수업에서 자주 쓰지 않았던 것)
+rem/em : 상위 태그에서 정해놓은 폰트 사이즈를 기준으로 몇배
+ex : 폰트 사이즈의 소문자 높이를 기준으로 함
+
+
+
+width:넓이
+height:높이
+
+color : 글자의 색
+        (transparent 투명색)
+
+
+글자 정렬
+1. text-align     => 좌우 (center를 주로 씀)
+2. vertical-align => 상하 (center를 주로 씀)
+3. line-height    => 문장 줄 사이의 간격
+
+
+
+opacity : 투명도 (1이 최대, 숫자가 작을수록 투명해짐)
+
+
+
+z-index : 다른 요소들의 위에 겹칠 것인지, 아래에 겹칠 것인지 정할 수 있음 (숫자 사용)
+
+
+list-style-type : <li>태그들에 붙어있는 리스트 스타일을 수정함
+예)
+list-style-type : disc (기본)
+list-style-type : square (사각형)
+list-style-type : circle (도넛 모양)
+*더 많은 건 필요할 때마다 인터넷 검색으로찾기
+
+
+
+margin => 지정된 태그의 바깥쪽 여백 (거리만 멀어짐)
+padding => 지정된 태그의 안쪽 여백 (살이 찌워짐)
+
+
+
+(*필수 설정)
+*{
+    padding:0;
+    margin:0;
+    ㄴ> h1이나 ul 등등의 태그들은 각자 기본적으로 자기만의 padding과 margin을 갖고 있음
+        그걸 시작 전에 일단 다 빼주는 작업을 하기 위해 이렇게 하는 것임
+        왜? => 그래야 px 계산하기 쉬워지니까
+
+    box-sizing:border-box;
+    ㄴ>  이걸 안 줬을 때 padding 값을 주면 해당 태그의 크기가 늘어나버림
+         padding을 주더라도 안쪽 여백만 생기고 말았으면 한다면 이걸 줘야 함
+}
+참고 => css에서 *은 '전부'라는 뜻임 
+
+
+
+[background]
+background : 배경색깔 / 배경 사진(url(./static....))
+backgrdound-size : 배경의 크기 (주로 contain, cover 등을 사용)
+backgrdound-repeat : 배경의 요소가 예상보다 작다면 바둑판 식으로 반복할 것인가?
+backgrdound-position : 배경의 요소의 위치 (center, top 등의 위치)
+
+
+
+[border]
+border : 테두리 (두께 , 속성(solid/dashed/dotted....) , 색깔)
+border-위치 : top, bottom, left, right;
+border-radius : 각을 둥글게
+border-위치-위치-radius : 네 각 중 특정 부분만 둥글게 가능
+
+
+
+overflow : hidden;
+ㄴ 지정된 크기보다 큰 부분은 잘라내라
+
+
+
+
+[position]
+
+static
+ㄴ 기본상태 / 태그가 만들어진 순서대로 잘 붙어있음 / 위치 지정 불가능
+
+relative 
+ㄴ 관계성 상태 / 순서대로 붙어있는데 / 위치 지정이 가능해짐
+
+absolute
+ㄴ 무관계 상태 / 순서를 무시하고 부모 태그의 시작점에 붙어있음 / 위치 지정시 순서를 무시함
+                                                            ㄴ 다른 태그를 밀어내지 않고 그 위나 아래에 무작정 끼어들음
+fixed
+ㄴ 스크롤을 내리던 올리던 지정된 위치에 반드시 고정됨
+
+sticky
+ㄴ 역시 지정된 위치에 고정되나, 해당 태그의 부모 구역 안에서만 적용됨
+   ex=> <div id="you">
+            <div id="me"></div>   
+        </div>
+      인 경우,
+       #me에게 position:sticky를 주면 #you의 범위 안에서만 위치 고정이 적용됨
+
+/* float
+ㄴ 순서로부터 완전히 붕 떠올라(float) 상관 없어지며, 포함한 요소들이 좌우로 늘어섬
+   ==> 지금은 사용하지 않으므로 flex로 대체함 */
+
+
+
+
+
+[display]
+
+none : 보이지 않음
+
+block : 크기 지정 가능, 부모 안에서 좌우를 꽉 채우는 게 기본 상태
+        예) div태그
+
+inline : 크기 지정 불가능, 안에 채워진 것의 크기에 따라 바뀜
+        예) span태그
+
+inline-block : 크기 지정 가능, 안에 채워진 것에 따라 크기가 바뀔 수 있음
+                * 좌우를 꽉 채우지 않음 => flex처럼 좌우로 배치하는 것이 가능함
+
+
+
+
+[display:flex]
+
+부모에게 입력해주면, 자식들이 좌우로 정렬됨
+
+*justify => 좌우
+*align   => 상하
+
+justify-content : 좌우정렬
+ㄴ space-around   => 균일한 간격으로 (양끝은 균일하지 않음)
+ㄴ *space-between => *양 끝은 여백을 남기지 말고
+ㄴ space-evenly   => 완전히 균일한 간격으로
+ㄴ center : 가운데로 몰기
+ㄴ start  : 왼쪽으로 몰기
+ㄴ end    : 오른쪽으로 몰기
+
+align-items : 상하정렬
+ㄴ center : 중앙
+ㄴ start  : 상단
+ㄴ end    : 하단
+
+(그런데 end와 start이 무엇이냐)
+시작
+    *------------
+    |           |
+    |           |
+    ------------*
+                  끝
+(좌측 상단에서 그리기 시작해, 우측 하단에서 끝나기 때문)
+
+
+
+flex-direction
+ㄴ row    : 가로 방향으로 정렬 (기본)
+ㄴ column : 세로 방향으로 정렬
+    *세로 방향으로 정렬할 시, 주축과 교차축이 바뀜
+     [무슨 소리지?] => align-items와 justify-content를 반대로 사용해야 한다는 것!
+
+
+
+
+flex-wrap
+ㄴ wrap : 부모 크게 맞춰서 여러 줄로 늘어서게 됨
+        예): 부모의 넓이가 300px이고 자식들이 각각 100px이라면,
+            자식들은 한 줄에 최대 3개만 들어가고 나머지는 아랫줄로 내려감
+
+ㄴ wrap-reverse : wrap이랑 똑같은데 정렬 순서만 거꾸로
+
+ㄴ no-wrap : 기본상태
+
+
+*flex-grow : 남아있는 공간을 전부 차지합니다.
+                여러 자식들에게 주었다면, 숫자 비율에 따라 차지합니다.
+예) 너비 1000px인 사각형에 100px짜리 세 개가 들어가 있음
+    700px이나 널널하게 남음
+    한 녀석에게 flex-grow:1 을 주면 그 남은 걸 혼자 다 차지함
+    두 녀석에게 flex-grow:1 씩 주면 반씩 나눠 먹음
+    모두에게 각각 flex-grow를 1,2,3으로 주면 1:2:3 으로 나눠 먹음
+
+
+flex-shrink : flex-grow의 축소 버전입니다. 잘 쓰지 않습니다.
+
+
+
+*self
+ㄴ 위의 요소들로 전체적인 통제를 할 수 있지만
+ㄴ 하나하나 개별적으로 바꿔주고 싶을 땐 self를 사용함
+예) *align-self(얘만 상하정렬 다르게), *justify-self(얘만 좌우정렬 다르게)
+
+
+:nth-child()
+같은 이름을 가진 여러 태그들 중에서
+유독 하나만 선택하고 싶을 때, "몇 번째 자식"이라는 식으로 사용할 수 있습니다.
+:first-child 첫 번째 자식
+:last-child  마지막 자식
+
+
+
+
+(stretch 속성)
+ㄴ align-items는 아무것도 입력하지 않을 경우 stretch 속성을 가집니다.
+ㄴ stretch는 쭉 늘리다는 뜻이에요(스트레칭)
+ㄴ *즉, 상하로 쭉 늘려서 꽉 채워진 상태가 기본이라는 거죠!
+
+
+
+
+
+
+
+
+[display:grid]
+
+grid-template-column : 칸
+grid-template-row    : 줄
+
+줄/칸이 몇 개나 있을지, 각각 크기를 얼마나 줄 것인지 한꺼번에 통제합니다.
+써주는 갯수마다 줄/칸이 하나씩 추가됩니다.
+예): grid-template-column : 30px 30px 30px 50px
+                            ㄴ 네 개의 값이 들어갔으니 가로로 네 칸입니다.
+                            ㄴ 마지막 녀석만 너비가 좀 더 길게 들어갔습니다.
+
+
+fr : fraction입니다. 대충 비율이라고 생각하면 됩니다.
+    예): 1fr 2fr 3fr 은 => 1 : 2 : 3 비율이란 뜻입니다.
+
+repeat(반복횟수, 크기) : 너비/높이가 같은 칸이 여러 개 필요할 때,
+                        일일이 적기 귀찮으므로 이걸 씁니다.
+
+
+(여러 칸 차지하게 하기)
+grid-column : a / b => a번 라인부터 b번 라인까지 차지합니다.
+grid-row    : a / b => a번 라인부터 b번 라인까지 차지합니다.
+
+*중요 포인트
+ㄴ 늘려준다는 개념이 아니라 강제로 차지한다는 개념입니다.
+ㄴ 따라서 마지막 번째 자식이 순서를 무시하고
+ㄴ 대뜸 첫 번째 자리를 차지할 수도 있는 겁니다.
+
+
+***grid 주의사항***
+html에서 만들어준 태그들 숫자만큼 표시됩니다.
+grid-template-column : repeat(3, 1fr)
+grid-template-row    : repeat(3, 1fr)
+을 입력해서 3줄 3칸 총합 9칸이 나오길 기대하고 있어도
+html의 태그 갯수가 9개보다 부족하면 일부 표시되지 않아요!
+
+
+
+
+대상:hover   : 이 요소 위에 마우스를 올렸을 때 어떻게 바뀔 것인가
+대상:active  : 이 요소를 클릭했을 때 어떻게 바뀔 것인가
+
+translate : 바뀔 때까지 걸리는 시간을 지정할 수 있습니다
+        예) 1s => 1초 동안 서서히 바뀜
+
+
+대상::before : 이 요소 왼쪽(이전)에 생성될 것
+대상::after  : 이 요소 오른쪽(이후)에 생성될 것
+ㄴ 수업에선 리스트 왼쪽에 아이콘을 띄워주는 용도로 사용했었음
+ㄴ 하트 모양을 만들 때도 사용했었음
+
+
+
+
+[transform]
+모양을 변형시킬 때 사용합니다
+
+transform:translate(좌우, 상하) : 이동합니다. 음수이냐 양수이냐에 따라 방향이 다릅니다.
+    예): translate(-100px, 100px) => 왼쪽으로 100px, 아래로 100px
+         translate(100px, -100px) => 오른쪽으로 100px, 위로 100px
+
+
+transform:rotate(숫자deg) : 기울입니다.
+                  양수를 입력하면 오른쪽, 음수를 입력하면 왼쪽으로 돕니다.
+                  참고로 deg는 몇'도'(degree)라는 뜻입니다.
+
+
+transform:scale(숫자) : 커지거나 작아집니다.
+              1이 기본이며, 소수점 입력이 가능합니다.
+              예): 2를 입력하면 두 배로 커집니다.
+
+
+transform:skew(숫자deg, 숫자deg) : 찌그러뜨립니다.
+                        숫자를 크게 줄수록 더 심하게 찌그러집니다.
+                        잘 사용하지 않습니다.
+
+
+transform:matrix(con, sin, -sin, con, 0, 0) : 여러 기능을 한꺼번에 사용할 수 있습니다.
+                                    보자마자 머리가 아픈데다가 잘 사용하지도 않으니
+                                    그냥 이런 게 있구나, 하고 넘어갑시다.
+
+
+여러 개의 변화를 주고 싶다면
+transform: rotate(60deg) translate(0,-20px) scale(2)
+                                                    같은 방법으로 사용해줄 수 있습니다.
+                                                    콤마(,)를 쓰지 않습니다. 주의해주세요.
+
+
+
+
+
+[box-shadow]
+box-shadow:가로 세로 부드러움 색깔
+
+말 그대로 도형 그림자입니다.
+가로는 x축 이동을, 세로는 y축 이동을,
+부드러움은 px 숫자가 높아질수록 부드럽게 흐려지고 번집니다.
+box-shadow: 3px 10px 29px #fff
+
+
+여러 개의 그림자를 입력할 수 있습니다.
+box-shadow:
+가로 세로 부드러움 색깔,
+가로 세로 부드러움 색깔,
+가로 세로 부드러움 색깔
+
+
+안쪽에 그림자가 지게 할 수 있습니다. (inset)
+box-shadow:
+inset 가로 세로 부드러움 색깔,
+inset 가로 세로 부드러움 색깔,
+inset 가로 세로 부드러움 색깔
+
+
+단순한 그림자효과 뿐만이 아니라
+색칠을 할 때에도 사용할 수 있습니다.
+
+
+
+*글자에만 적용하고 싶은 경우,
+ [text-shadow]를 사용해줍시다.
+ 요령은 같습니다.
+
+
+
+
+
+[animation]
+두 가지 과정이 필요합니다.
+1. 애니메이션을 만든다
+2. 애니메이션을 대상에게 적용시킨다
+
+ㄴ애니메이션 만들기
+@keyframes 애니메이션 이름{
+    두 가지 방식이 있습니다.
+
+
+    from{처음의 모습};
+    to{이후의 모습};
+
+
+    또는
+
+    
+    0%{
+        처음 모습
+    }
+    40%{
+        40% 무렵의 모습
+    }
+    95%{
+        95% 무렵의 모습
+    }
+    to{
+        마지막 모습
+    }
+}
+
+애니메이션 적용하기
+
+animation-name:애니메이션 이름
+animation-duration:2s /*적용시간*/
+animation-timing-function: ease / ease-in / ease-in-out / linear /*진행되는 방식*/
+animation-delay:?s => 몇 초 뒤에 시작
+animation-iteration-count: 횟수 입력 / infinite무한
+animation-direction: alternate;
+/*편도 normal, 역방향 reverse, 왕복 alternate*/
+
+/*한 번에 쓰기*/
+animation:bounce 1s ease-in infinite alternate;
+ㄴ bounce라는 애니메이션을 1초 동안 ease-in 방식으로 무한하게 왕복으로!

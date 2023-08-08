@@ -1,0 +1,48 @@
+
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li{
+    margin:0;
+    padding:0;
+}
+
+img{
+    max-width:100%;
+    display:block;
+
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#wrap{
+    max-width:1080px;
+    width:90%;
+    margin: 0 auto;
+
+}
+
+#header{
+    display:flex;
+    justify-content: space-between;
+    padding: 7px 20px;
+    border-bottom: 1px solid hotpink;
+}
+
+.header-logo{
+    width:100px;
+}
+
+.header-nav{
+    display:flex;
+    align-items: center;
+}
+
+.header-nav a{
+    margin-left:15px;
+}
+

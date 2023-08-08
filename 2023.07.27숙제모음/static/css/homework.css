@@ -1,0 +1,197 @@
+body{
+    padding:0;
+    margin:0;
+    background-color:darkkhaki;
+    color:white;
+    position:relative;
+}
+/*화면을 꽉 차게 써야하니깐 body로 줬음*/
+
+#wrap{
+    width:100%;
+    position:relative;
+}
+
+#header{
+    width:1200px;
+    top:0;
+    margin:0 auto;
+    background-color:#164C45;
+    display:flex;
+    position:sticky;
+    z-index:100;
+    font-size:25px;
+    padding:20px 0;  
+    justify-content:space-between;
+    
+    
+
+}
+
+.menu li{
+    margin:0 50px;
+}
+
+#section{
+    width:1200px;
+    margin: 0 auto;
+    display:flex;
+    margin-top:15px;
+}
+
+.left_section{
+    width:80%;
+    height:800px;    
+}
+
+.right_section{
+    width:20%;
+    height:800px;
+    
+}
+
+.left_section .mainimage{
+    width:100%;
+    height:400px;
+    overflow:hidden;
+}
+
+
+.left_section .mainimage img{
+    width:100%;
+}
+
+.info_adImg{
+    width:100%;
+    display:flex;
+    position:relative;
+}
+
+.info_adImg .info_box{
+    width:70%;
+    position:relative;
+}
+
+.info_adImg .info_box .info_more{
+    position:absolute;
+    top:0;
+    right:20px;
+}
+
+.info_box .info_list{
+    list-style-type:none;
+}
+
+.info_adImg .info_box .info_list li::before{
+    content:'';
+    display:inline-block;
+    height:15px;
+    width:15px;
+    background-image:url('../image/listIcon.png');
+    background-size: 15px;
+    background-repeat: no-repeat;
+    margin-right:10px;
+}
+
+
+.info_box .info_list li{
+    padding:5px 0;
+}
+
+
+.info_adImg .adImg_box{
+    width:30%;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+}
+
+.info_adImg .adImg_box img{
+    width:100%;
+}
+
+
+#pic_box{
+    width:100%;
+}
+
+.pic_box .info_adimg{
+    width:100%;
+    height:80px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.pic_box .info_adimg img{
+    width:140px;
+    
+}
+
+.login_wrap{
+    position:relative;
+    text-align:center;
+    border:1px solid white;
+    height:120px;
+    width:240px;
+}
+
+.login_wrap p{
+    font-size:35px;
+    font-weight:30px;
+}
+
+.submenu_box{
+    margin-top:50px;
+    padding:10px;
+}
+
+.submenu_list{
+    list-style-type:none;
+    padding:0;
+    margin:0;
+    font-size:20px;
+    margin-top:10px;
+    text-align:center;
+    font-weight:700;
+}
+
+.list{
+    padding:5px;
+    }
+
+.list:hover{
+    background-color:#E3C75F;
+}
+
+#footer{
+    width:1200px;
+    margin:0 auto;
+}
+
+#ft_menu{
+    width:100%;
+    padding:30px;
+}
+
+.ft_menu_list{
+    list-style-type:none;
+    padding:0;
+    margin:0;
+    display:flex;
+}
+
+.ft_menu_list li{
+    padding-right:30px;
+}
+
+.address{
+    padding:0 30px;
+}
+
+.copyright{
+    padding: 5px 30px;
+}
+
+
+
+

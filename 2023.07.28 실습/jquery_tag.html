@@ -43,11 +43,12 @@
         // $("#bpx2").empty();//선택한 태그안에 글씨만 지우는 법 태그의 하위 요소들만 삭제
         //$("#list1").remove(); --> 선택한 태그 삭제
       });
-      
+
       $("#bt3").click(function(){
           $("#p1").append("<p>인생을"+i+"</p>"); //현재 선택된 태그 다음에 추가-after()
           $("#p1").prepend("<p>선향이는"+i+" </p>");// 이전에 추가 - before()
-          i++;// 이전에 추가 - before()
+          i++;
+// 이전에 추가 - before()
 // append() --> 맨 뒤에 추가
 // prepend() --> 맨 앞에 추가
 // after() --> 바로 뒤에 추가
@@ -59,7 +60,9 @@
       $("#bt2").click(function(){
         $(".image").attr("src","https://loremflickr.com/200/200/tree");
         // $("#naver").attr("href", "https://www.naver.com");
-      })
+      });
+
+
       $("#bt1").click(function(){
         alert($("#text1").text(),html());
         alert($("#name").val())

@@ -1,0 +1,16 @@
+{
+  "person":
+  [{"name" : "이상준", "notebook" : "mac","age" : 20} ,
+
+  {"name" : "김선향","notebook" : "삼성","age" :25},
+
+  {"name" : "김석진","notebook" : "LG","age" :32},
+
+  {"name" : "정호석","notebook" : "소닉","age" :30},
+
+  {"name" : "박지민","notebook" : "마이크로소프트","age" :29},
+
+  {"name" : "임민지","notebook" : "sk","age" :28}
+]
+}
+

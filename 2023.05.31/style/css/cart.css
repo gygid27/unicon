@@ -1,0 +1,58 @@
+
+#cart_main{
+    width:100%;
+    margin-top:50px;
+
+
+
+}
+#cart_wrap{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+
+    /*상단바 공간 조금 여백줄때*/
+}
+
+
+
+.cart_item{
+    width:100%;
+    display:flex;
+    padding:10px 0;
+    border-bottom: 1px solid grey;
+    align-items:center;
+
+
+}
+.item_image{
+    background-image: url(https://placeimg.com/100/100/animals);
+    width: 100px;
+    height: 100px;
+    background-size:contain;
+
+}
+.item_info{
+    flex-grow:1;
+    min-width:250px;
+    padding-left: 20px;
+
+
+}
+
+.item_info p:first-child{
+    margin-bottom: 10px; 
+}
+.item_count{
+    width:20%;
+
+}
+.item_amount{
+    width:15%;
+    border-left:1px solid grey;
+    height:100px;
+    display:flex;
+    align-items:center;
+    padding-left:10px;
+
+}
