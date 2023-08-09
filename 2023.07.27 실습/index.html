@@ -18,29 +18,32 @@
               <input type="datetime-local" name="wdate" id="wdate">
         </div>
         <div class="item">
-          <label>금액</label>
+          <!--label에도 class이름 주기
+          그래야 css가 가능하다.-->
+          <label class="item_title">금액</label>
           <input type="text" name="wmoney" id="wmoney">
         </div>
         <div class="item">
-          <label>분류</label>
+          <label class="item_title">분류</label>
           <select id="wcategory"></select>
         </div>
         <div class="item">
-          <label>내용</label>
-          <input type="text" name="wdetail" id="wdetail">
+          <label class="item_title">내용</label>
+            <input type="text" name="wdetail" id="wdetail">
         </div>
         <div class="item getcome">
+
           <div class="expense">
-            <label>결제방법</label>
+            <label class="item_title">결제방법</label>
             <input type="radio"  name="payment" id="Scash"><label for>현금</label>
             <input type="radio"  name="payment" id="Scard">카드
             <select id="mycard"  class="hide"></select>  
           </div> 
           <div class="income">
-            <label>수입</label>
+            <label class="item_title">수입</label>
             <input type="radio" name="income_method"  id="income_bank">계좌
             <input type="radio"  name="income_method" id="income_cash">현금
-           <select  id="mybank" class="hide"></select>
+            <select  id="mybank" class="hide"></select>
           </div>
         </div>
       </header>
