@@ -50,5 +50,13 @@ setinterval ,setTimeout
 
 fetch함수로
 
+set은 중복을 허용하지 않는다.
+
+set은 그룹을 지어주기 위해 사용함
+차집합, 교집합, 합집합을 표현됨
+
+
+
+
 
 
