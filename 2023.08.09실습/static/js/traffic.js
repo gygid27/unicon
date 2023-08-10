@@ -51,20 +51,27 @@ $(async function () {
         ctx.fill();
     });
     var id;
-    var step = 10;
+    var stepx = 10;
+    var stepy = 15;
+    var y = 80;
+    var x = 50; //원이 그려지는 좌표
     //원을 움직이고 싶을 때 하는 방법
     $('#move').click(function () {
         id = setInterval(function () {
             ctx.clearRect(0, 0, 500, 500);
             ctx.beginPath();
-            ctx.arc(i, 100, 50, 0, 2 * Math.PI);
+            ctx.arc(xy, 100, 50, 0, 2 * Math.PI);
             ctx.stroke();
             ctx.fillStyle = 'orange';
             ctx.fill();
-            if (i == 450 || i == 50) step *= -1;
-            //clearRect는 지워주는 것
+            if (x > 450 || x < 50) step *= -1;
+            if (y < 50 || y > 450) {
+                stepy = stepy < 0 ? (Math.floor(Math.random() * 5) + 10) * -1 : Math.floor(Math.random() * 5) + 10;
+                stepy *= -1;
+            }
         }, 50);
     });
+    //clearRect는 지워주는 것
 
     // ctx.moveTo(0, 0);
     // ctx.lineTo(100, 100);
