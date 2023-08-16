@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+        <script src="http://cdn.jsdelivr.net/npm/chartjs-plugin-autocolors"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.7.0.js"
+            integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+            crossorigin="anonymous"
+        ></script>
+        <style>
+            #board {
+                width: 500px;
+                height: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="board">
+            <canvas id="chart1" width="500" height="500"></canvas>
+        </div>
+        <!-- 크기 높이를 줄때에는 canvas바깥쪽으로 줘야지 모양이 깨지지 않게 나올 수 있다. -->
+    </body>
+</html>
+<script>
+    const autocolors = window['chartjs-plugin-autocolors'];
+    Chart.register(autocolors);
+    //모든 차트에 색깔을 등록하는 방법
+
+    const score = [89, 56, 45, 99];
+    let avg = parseInt((score[0] + score[1] + score[2] + score[3]) / 4);
+    const img = new Image();
+    img.src = './static/image/1.jpg';
+
+    img.onload = function () {
+        const ctx = $('#chart1')[0].getContext('2d');
+        const pattern = ctx.createPattern(img, 'repeat');
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['영희', '철수', '민수', '은정'],
+                //데이터 셋에서 막대그래프의 색깔 너비 등 변경해줄 수 있다.
+                datasets: [
+                    {
+                        label: '성적표',
+                        data: score,
+                        // borderColor: 'black',
+                        // ['rgba(255,193,158,0.6)', '#c4b73b', 'rgba(134,229,127,1)', 'skyblue'],
+                        //뒤에 대문자 꼭 잊지말고 , 도 잊지말기!!!!!!!!!!!
+                        // backgroundColor: pattern,
+                        // ['rgba(255,193,158,0.6)', '#c4b73b', 'rgba(134,229,127,1)', 'skyblue'],
+                        //여러가지 색깔을 넣어주고 싶음 배열로 넣기 border 와 background둘다 넣어주기
+                        borderWidth: 1,
+                        base: avg,
+                    },
+                ],
+            },
+            options: {
+                plugins: {
+                    autocolors: {
+                        mode: 'data',
+                    },
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                    },
+                },
+            },
+        });
+    };
+
+    //Chart.js/4.3.3/chart.min.js 이게 있어서 가능함
+    //labels가 범례를 뜻함
+    //오타를 줄이는 법은 내가 틀렸다고 마음먹은 상태에서 적기 그래야지 틀린게 눈에 보인다, 내 고집대로 하지 말기
+</script>

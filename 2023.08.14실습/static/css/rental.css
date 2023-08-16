@@ -1,6 +1,6 @@
 * {
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
 }
 
@@ -15,7 +15,7 @@
 
 .select_box {
     width: 1000px;
-    height: 30px;
+    height: 40px;
     border: 1px solid grey;
     background: grey;
     display: flex;
@@ -27,28 +27,58 @@
 }
 
 .select_pl {
-    width: 200px;
+    width: 100px;
     font-weight: 800;
     display: flex;
     justify-content: space-around;
     font-size: 20px;
+    align-items: center;
+}
+
+#si {
+    width: 20px;
+    height: 20px;
+}
+
+#gu {
+    width: 20px;
+    height: 20px;
 }
 
 .check_wrap {
     width: 1000px;
     height: 100px;
-    margin: 30px 30px;
+    margin: -2px 30px;
     border: 1px solid grey;
     /* position:absolute; */
 }
 
 .check_box {
-    width: 500px;
-    height: 35px;
-    margin: 15px 20px;
+    width: 1000px;
+    height: 40px;
+    margin: 10px 15px;
+    padding: 0 30px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.check_box2 {
+    width: 1000px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20px;
+    padding-left: 25px;
+    padding-right: 10px;
+    font-size: 20px;
 }
 
 .check_box label {
+    font-weight: 800;
+}
+
+.check_box2 label {
     font-weight: 800;
 }
 
@@ -60,16 +90,21 @@
 }
 
 .search_wrap #rentgtn {
-    width: 190px;
-    height: 30px;
+    width: 490px;
+    height: 60px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 800;
 }
 
 .search_wrap #rntchrg {
-    height: 30px;
+    width: 490px;
+    height: 60px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 800;
 }
 
 .search_result {
@@ -86,5 +121,6 @@
 .search_result table th {
     background: grey;
     width: 500px;
-    font-size: 17px;
+    height: 50px;
+    font-size: 20px;
 }
