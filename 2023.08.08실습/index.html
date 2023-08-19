@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="./static/js/index.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div id="search_box">
+                <div class="searchInput">
+                    <input type="text" name="searchWord" id="searchWord">
+                    <i class="bi bi-search-heart"></i>
+                </div>
+            </div>
+            <div id="searchFilter">
+                <div class="searchdetail">
+                    <h3>상세검색</h3>
+                </div>
+                <div id="detailbox" class="detailcontainer">
+                    <dl class="detailList">
+                        <dt class="itemDt">어초종류</dt>
+                        <dd class="itemDd">
+                            <span class="item_d">
+                                <input type="checkbox" name="type" value="사각">
+                                <label>사각</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="type" value="사도">
+                                <label>사도</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="type" value="반구형">
+                                <label>반구형</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="type" value="강제(어선)">
+                                <label>강제(어선)</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="type" value="신요철">
+                                <label>신요철</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="type" value="고철">
+                                <label>고철</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="type" value="대형전주">
+                                <label>대형전주</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="type" value="강제(상자형)">
+                                <label>강제(상자형)</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="type" value="강제(대형)">
+                                <label>강제(대형)</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="type" value="사각전주">
+                                <label>사각전주</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="type" value="어류용세라믹">
+                                <label>어류용세라믹</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="type" value="정삼각뿔">
+                                <label>정삼각뿔</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="type" value="패조류용세라믹">
+                                <label>패조류용세라믹</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="type" value="폴리콘">
+                                <label>폴리콘</label>
+                            </span>
+                        </dd>
+                    </dl>
+                    <dl class="detailList">
+                        <dt class="itemDt">어초수량</dt>
+                        <dd class="itemDd">
+                        <input type="radio" name="amount" value="10">
+                        <label>10개 이상</label>
+                        <input type="radio" name="amount" value="50">
+                        <label>50개 이상</label>
+                        <input type="radio" name="amount" value="100">
+                        <label>100개 이상</label>
+                        <input type="radio" name="amount" value="150">
+                        <label>150개 이상</label>
+                        <input type="radio" name="amount" value="200">
+                        <label>200개 이상</label>
+                        <input type="radio" name="amount" value="250">
+                        <label>250개 이상</label>
+                        <input type="radio" name="amount" value="300">
+                        <label>300개 이상</label>
+                        </dd>
+                    </dl>
+                    <dl class="detailList">
+                        <dt class="itemDt">설치년도</dt>
+                        <dd class="itemDd" id="install">
+                            <span class="item_d">
+                                <input type="checkbox" name="year" value="1987">
+                                <label>1987</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="year" value="1986">
+                                <label>1986</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="year" value="1990">
+                                <label>1990</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="year" value="1991">
+                                <label>1991</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="year" value="1992">
+                                <label>1992</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="year" value="1993">
+                                <label>1993</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="year" value="1994">
+                                <label>1994</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="year" value="1995">
+                                <label>1995</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="year" value="1996">
+                                <label>1996</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="year" value="1997">
+                                <label>1997</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="year" value="1998">
+                                <label>1998</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="year" value="1999">
+                                <label>1999</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="year" value="2000">
+                                <label>2000</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="year" value="2001">
+                                <label>2001</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="year" value="2002">
+                                <label>2002</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="year" value="2003">
+                                <label>2003</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="year" value="2004">
+                                <label>2004</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="year" value="2005">
+                                <label>2005</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="year" value="2006">
+                                <label>2006</label>
+                            </span>
+                            <span class="item_d">
+                                <input type="checkbox" name="year" value="2007">
+                                <label>2007</label>
+                            </span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
