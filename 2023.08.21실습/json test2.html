@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!--jquery-->
+        <script
+            src="https://code.jquery.com/jquery-3.7.0.js"
+            integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+            crossorigin="anonymous"
+        ></script>
+        <style>
+            #wrap {
+                width: 500px;
+                margin: 0 auto;
+            }
+
+            .input_box {
+                text-align: center;
+            }
+
+            #content {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 30px;
+                font-size: 15px;
+            }
+
+            #content th {
+                border: 1px solid black;
+            }
+            #content td {
+                border: 1px solid grey;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="input_box">
+                <input type="text" id="keyword" name="keyword" />
+                <button id="bt">검색</button>
+            </div>
+
+            <div id="list">
+                <table id="content">
+                    <thead>
+                        <th>가게이름</th>
+                        <th>메뉴</th>
+                    </thead>
+                    <tbody id="state_detail"></tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+    //1. json파일로 가게불러오기
+    $.getJSON('./data/test1.json', function (a) {
+        console.log(a);
+        //객체의 키를 배열로 가져오기
+        var key_arr = Object.keys(a);
+        console.log(key_arr);
+
+        $.each(key_arr, function (i, k) {
+            $('#state_detail').append(
+                '<tr class="data_result"><td class="store">' + k + '</td><td class="menu">' + a[k] + '</td></tr>'
+                //k는  key_arr의 요소 a이라는
+            );
+        });
+    });
+    $('#bt').click(function () {
+        var word = $('#keyword').val();
+        $('#state_detail>tr').filter(function () {
+            var b = $(this).text().indexOf(word) > -1;
+            $(this).toggle(b);
+        });
+    });
+</script>

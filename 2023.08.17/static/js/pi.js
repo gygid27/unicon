@@ -76,7 +76,7 @@ function income_pi() {
                     borderColor: ['#F4A5A1', '#faa98e', '#94b0bb', '#b3b4d2', '#D88382', '#fa835b'],
                     borderDash: [5, 5], // 선의 길이 선의 간격으로
                     borderDashOffset: 10, // 테두리 갯수를 지정한다.
-                    rotation: 45, //어디부터 그려질 것인가?
+                    rotation: 45, //어디부터 그려질 것인가? -> 기울기
                 },
             ],
         },
@@ -111,17 +111,23 @@ function income_pi() {
 
 function expen_pi() {
     pi2 = new Chart(ctx2, {
+        plugins: [ChartDataLabels],
         type: 'doughnut',
         data: {
             labels: category[1],
             datasets: [
-                {   label:category[1],slice(0,4),
-                    data:expen.slice(0,4),
-                    // backgroundColor: ['#461959', '#7A316F', '#CD6688', '#AED8CC', '#FCBAAD', '#E48586', '#A084E8'],
+                {
+                    label: category[1].slice(0, 4),
+                    data: expen.slice(0, 4),
+                    backgroundColor: ['#461959', '#7A316F', '#CD6688', '#AED8CC', '#FCBAAD', '#E48586', '#A084E8'],
+                    borderWidth: 0,
+                    borderWidth: 3,
+                    borderColor: ['#461959', '#7A316F', '#CD6688', '#AED8CC', '#FCBAAD', '#E48586', '#A084E8'],
+                    ratation: 0,
                 },
                 {
-                    data: expen2,
                     label: category[1].slice(4, 7),
+                    data: expen2,
                 },
             ],
         },
