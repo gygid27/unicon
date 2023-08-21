@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!--제이쿼리-->
+        <script
+            src="https://code.jquery.com/jquery-3.7.0.js"
+            integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+            crossorigin="anonymous"
+        ></script>
+        <!--차트-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0-beta/dist/chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-autocolors"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+        <link rel="stylesheet" href="./static/css/car.css" />
+        <!--자바스크립트 주소-->
+        <script src="./static/js/car.js"></script>
+        <style>
+            #border {
+                width: 800px;
+                height: 800px;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="board">
+            <canvas id="car" width="1000" height="800"></canvas>
+        </div>
+    </body>
+</html>
+<!--
+    json파일에서 json 데이터 가져오기
+    json데이터 중에서 용도가 비사업용인 승용차의 연료별로 총합을 구하기
+    연료는 전기,하이브리드, 휘발유, 경유
+-->

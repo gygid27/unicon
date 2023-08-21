@@ -21,7 +21,7 @@ let 겸지 = {
 let 수향 = {
     data: [100, 100, 90, 80, 70, 100, 30, 20],
     borderColor: 'hotpink',
-    pointHoverBorderWidth:10,
+    pointHoverBorderWidth: 10,
 };
 
 const loveData = {
@@ -33,11 +33,11 @@ const chartOption = {
     plugins: {
         title: { display: true, text: '기념일에따른 사랑지수' },
     },
-    scales{
-     y:{
-     stacked:true
-    }
- }
+    scales: {
+        y: {
+            stacked: true,
+        },
+    },
 };
 
 new Chart(ctx, {

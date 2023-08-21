@@ -99,7 +99,31 @@
 
         //li태그에 토글을 시작해야한다
         $('#list>li').filter(function () {
-            $(this).text.
+            var hasDept = true;
+            if (dept.length != 0) {
+                hasDept = false;
+                for (var i in dept) {
+                    if (
+                        $(this)
+                            .text()
+                            .indexOf(dept[i] == 'com' ? '컴퓨터공학과' : '정보통신학과') > -1
+                    )
+                        hasDept = true;
+                }
+            }
+            $(this).toggle(hasDept);
+            //indexOf사용하는 것이 배열에서 사용가능하다.
+            //문자열은 배열이다.
         });
     });
 </script>
+<!--
+    foreach는 자바스크립 
+    $each는 제이쿼리
+
+    배열에 사용되는 반복문 
+    for~ in, for ~ of, forEach
+    for(var i in 배열) -> i에는 배열의 인덱스, 데이터가 대입된다.
+    for(var k of 배열) ->
+
+-->
