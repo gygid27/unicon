@@ -164,4 +164,3 @@ function include(kind){// include라는 함수정의 kind라는 파라미터를 
 
 
 
-
