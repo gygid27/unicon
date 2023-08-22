@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+         <!-- jquery-->
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <style>
+        *{
+    padding:0;margin:0;box-sizing: border-box;
+}
+#wrap{
+    width:1000px;
+    margin:0 auto;
+    position:relative;
+}
+#search_area{
+    width:100%;
+    padding:30px 20px;
+    position:relative;
+}
+.search_box{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px 0;
+    column-gap: 20px;
+    position:relative;
+}
+#searchDate{
+    height:25px; width:200px; border-radius: 5px; padding:2px 5px;
+}
+.radio_box{position:relative;}
+.radio_box input[type=radio]{ opacity: 0;}
+.radio_box input[type=radio] + label{
+    display:inline-block;
+    border:1px solid #aaa;
+    border-radius: 10px;
+    padding:3px 20px;
+    position:relative; left:-13px;
+}
+.radio_box input[type=radio]:checked + label{
+    background:#222845;
+    color:#fff;
+}
+
+#search_result{
+    margin:30px 0;
+    padding:20px 0;
+    border-top:3px solid #aaa;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap:15px;
+}
+
+    </style>
+    </head>
+    <body>
+        <div id="wrap">
+    <div id="search_area">
+        <div class="search_date search_box"><input type="date" id="searchDate"></div>
+        <div class="search_radio search_box">
+            <div class="radio_box">
+                <input type="radio" name="weather" value="흐림" id="w1"><label for="w1">흐림</label>
+            </div>
+            <div class="radio_box">
+                <input type="radio" name="weather" value="맑음" id="w2"><label for="w2">맑음</label>
+            </div>
+            <div class="radio_box">
+                <input type="radio" name="weather" value="천둥" id="w3"><label for="w3">천둥</label>
+            </div>
+        </div>
+    </div>
+    <div id="search_result"></div>
+    </body>
+</html>
+<script>
+$(function(){
+    $.getJSON("./database/test3.json",function(data){
+        $.each(data.diary,function(i,item){
+            
+            $("#search_result").append("<div class='result_card'>"+
+            "<p class='date'>"+item.작성일+"</p>"+
+            "<p class='title'>"+item.제목+"</p>"+
+            "<p class='wt'>"+item.날씨+"</p>"+
+            "<p class='detail'>"+item.내용+"</p>"+            
+            "</div>");
+        });
+
+    });
+    $("#searchDate").change(search);
+    $("input[name=weather]").click(search);
+
+})
+function search(){
+    var sDate = $("#searchDate").val().split("-").join("");
+    var sWeather=$("input[name=weather]:checked").val();
+
+    $(".result_card").filter(function(){
+        var classDate = $(this).children(".date");
+        var classWt = $(this).children(".wt");
+        var hasDate = sDate==''?false:classDate.text().indexOf(sDate)>-1;
+        var hasWeather = sWeather=='undefined'?true:classWt.text().indexOf(sWeather) > -1;
+
+        $(this).toggle(hasDate || hasWeather);
+        // console.log(sWeather);
+    });
+}
+</script>
+<!--
+    지금 내가 해야하는 일은 흐림, 맑음, 천둥
+-->
