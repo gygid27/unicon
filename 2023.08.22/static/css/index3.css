@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+#wrap {
+    width: 900px;
+    margin: 0 auto;
+}
+#side {
+    width: 30%;
+    height: 800px;
+
+    background-color: #ddd;
+}
+
+#side #icon {
+    font-size: 30px;
+    padding: 0 15px;
+}
+#word {
+    border: none;
+    border-radius: 10px;
+    width: 70%;
+    height: 30px;
+}
+
+#side h3 {
+    padding: 20px 0;
+    border-top: 1px solid rgb(164, 152, 152);
+    margin-top: 30px;
+    text-align: center;
+}
+
+#category {
+    width: 200px;
+    padding: 10px 10px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+#money {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    position: relative;
+    bottom: 25px;
+    left: 25px;
+}

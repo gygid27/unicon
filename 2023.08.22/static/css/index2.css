@@ -1,0 +1,174 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#wrap {
+    width: 900px;
+    margin: 20px auto;
+    border: 1px solid black;
+}
+
+#main_title {
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+}
+
+#search_wrap {
+    width: 100%;
+    margin: 30px auto;
+}
+
+.search_input {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    background: #557a46;
+    padding-top: 10px;
+}
+
+.word_box #word {
+    width: 300px;
+    height: 29px;
+    border: none;
+    border-bottom: 2px solid;
+}
+
+.word_box input {
+    padding-left: 20px;
+    font-size: 13px;
+}
+
+.word_box #word i {
+    font-size: 20px;
+}
+
+#detail_bt {
+    width: 80px;
+    height: 30px;
+    margin: 0 10px;
+    background-color: #f2ee9d;
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+}
+
+.search_detail .tall_range {
+    width: 100%;
+    display: flex;
+    margin: 20px;
+    justify-content: left;
+    padding: 20px 0;
+}
+
+.search_detail {
+    width: 100%;
+    margin-top: 10px;
+    padding: 0 230px;
+}
+
+.search_detail .tall_range label {
+    width: 80px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.search_detail .tall_range input {
+    width: 70px;
+    height: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.search_detail .eyes_range {
+    display: flex;
+    margin: 10px 20px;
+}
+
+.search_detail .eyes_range input {
+    border-radius: 10px;
+    width: 70px;
+    height: 20px;
+    text-align: center;
+}
+
+.eyes_range label {
+    width: 80px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.search_detail .cls_select {
+    display: flex;
+    width: 300px;
+    margin: 30px 15px;
+    font-weight: 800;
+}
+
+.search_detail .cls_select label {
+    width: 80px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+#cls {
+    width: 68px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#list_wrap {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+}
+
+.info {
+    width: 30%;
+    border: 1px solid black;
+    margin: 10px auto;
+    text-align: left;
+}
+.dt {
+    list-style-type: none;
+}
+
+.name {
+    font-weight: 800;
+    text-align: center;
+    font-size: 20px;
+}
+
+.chartMaketBt {
+    width: 95%;
+    position: relative;
+    display: flex;
+    justify-content: right;
+}
+
+#chartBt {
+    width: 55px;
+    height: 40px;
+    position: absolute;
+    background-color: #f2ee9d;
+    border: none;
+    border-radius: 20px;
+    top: 15px;
+    right: 120px;
+}
+
+#student_chart {
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+}
