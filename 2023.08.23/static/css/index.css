@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+/* li 직접주는 것 보단 ul 태그로 주는것도 방법*/ ul{
+    list-style-type: none;
+}
+
+#wrap {
+    /* width: 900px; */ width:100%;
+    margin: 0 auto;
+    /*접혀있을 때, 펼쳤을 때를 위한 것?*/
+    max-width:1000px;
+    min-width:700px;
+}
+
+.sideclose{
+    position:absolute;
+    background:#F4EEEE;
+    width:300px;
+    height:100%;
+    /* padding:0 70px;   점점 검색크기가 줄어짐*/
+    margin:0 12px;
+    left:-350px;
+    translate: left 0.5 ease;
+}
+
+.close{/*접혀있을 때 아이콘모습*/
+    position:absolute;
+    left:350px;
+    top:5px;
+    cursor:pointer;
+    translate:left 1s ease 0.5s;
+}
+
+.open{left:50px; color:#FAF1E4;}
+
+#word_box{
+    margin:0 30px;
+}
+
+#side #icon {
+    font-size: 50px;
+    padding: 0 15px;
+}
+#word {
+    border: none;
+    border-radius: 10px;
+    width: 230px;
+    height: 30px;
+    margin-top:15px;
+    
+}
+
+#side h3 {
+    padding: 20px 0;
+    border-top: 1px solid rgb(164, 152, 152);
+    margin-top:20px;
+    margin:30px auto;
+    text-align: center;
+}
+
+#category {
+    width: 200px;
+    padding: 10px 10px;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+#category li{
+    display:flex;
+}
+
+#money_box{
+    text-align:center;
+    margin-top:20px;
+    
+
+}
+
+#money {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border:none;
+    border-radius: 10px;
+    padding:0 10px;
+
+    
+}
+/* input박스의 checkbox에 크기,높이주고 싶을 떄 이거 참조하기
+#category input[type=checkbox]{
+    height:17px;width:17px; */
