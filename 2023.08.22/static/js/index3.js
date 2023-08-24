@@ -1,7 +1,9 @@
-$.getJSON('./database/test5.json', function (d) {
-    console.log(d);
-
-    $.each;
+let house = new Object();
+$(function () {
+    $('#icon').click(function () {
+        $(this).toggleClass('open');
+        $('#side').toggleClass('sideopen');
+    });
 });
 
 //계획세우기
