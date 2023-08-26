@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@100&family=Noto+Sans+KR:wght@100&display=swap');
+
+#board_container {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(7, calc(1400px / 9));
+    /* grid-template-areas:
+        'top top top top top top top top top'
+        'l.......r'
+        'l.......r'
+        'l.......r'
+        'l.......r'
+        'l.......r'
+        'bottom  bottom bottom bottom bottom bottom bottom bottom bottom'; */
+}
+
+.pan {
+    display: flex;
+    align-items: end;
+}
+
+.center {
+    background: url(../image/1.jpg) center no-repeat;
+    background-size: cover;
+    grid-area: center;
+}
+
+.location_name {
+    background: lightgreen;
+    width: 100%;
+    color: black;
+    padding: 5px 0;
+    text-align: center;
+    border-right: 1px solid grey;
+    font-weight: 800;
+}
+
+/* .top {
+    grid-area: top;
+}
+
+.sideR {
+    grid-area: l;
+}
+
+.bottom {
+    grid-area: bottom;
+} */
+
+#items {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 300px;
+    width: 500px;
+}
+#items #dice_bt {
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #fff;
+    padding: 5px 30px;
+    font-size: 25px;
+    font-weight: 800;
+    background: rgb(67, 119, 115);
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#items #dice_bt:hover {
+    filter: brightness(0.85);
+}
+#items #dice_bt:active {
+    box-shadow: inset 5px 5px 0px rgba(0, 0, 0, 0.25);
+    filter: none;
+}
+
+#dice_wrap {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0px auto;
+    perspective: 700px; /*원근감 효과(3D)*/
+}
+#dice_wrap:after {
+    position: absolute;
+    left: 50%;
+    bottom: -60px;
+    transform: translateX(-50%);
+    display: block;
+    content: '';
+    width: 120px;
+    height: 10px;
+    filter: blur(10px);
+    background: rgb(0, 0, 0, 0.7);
+}
+#dice_wrap .dice {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 1.5s;
+    transform-style: preserve-3d;
+    /*3d으로 표현하는 법*/
+    /* animation: turn 6s linear infinite; */
+}
+
+@keyframes turn {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}

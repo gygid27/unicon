@@ -15,8 +15,7 @@ li {
 #side {
     width: 30%;
     height: 800px;
-
-    background-color: #ddd;
+    background: #ddd;
 }
 
 #side #icon {
@@ -44,11 +43,12 @@ li {
     font-weight: 800;
 }
 
+#money_box {
+    text-align: center;
+}
+
 #money {
     width: 100px;
     height: 30px;
     text-align: center;
-    position: relative;
-    bottom: 25px;
-    left: 25px;
 }
