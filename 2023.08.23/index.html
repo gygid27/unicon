@@ -13,12 +13,12 @@
         <!--chart-->
         <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
         <script src="http://cdn.jsdelivr.net/npm/chartjs-plugin-autocolors"></script>
-        <!--스크립트-->
-        <script src="./static/js/index.js"></script>
         <!--css-->
-        <link rel="stylesheet" href="./static/css/index.css" />
+        <link rel="stylesheet" href="./static/css/index.css">
         <!--부트스트랩-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <!--자바스크립트-->
+        <script src="./static/js/index.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -52,8 +52,16 @@
                 <div id="money_box">
                     <input type="number" id="money" />이하
                 </div>
+                <div id="bt_box">
+                    <a href="javascript:showList();" >List</a>
+                    <a href="javascript:showChart();">chart</a>
+                </div>
             </div>
             <div id="main"></div>
+            <div id="mychart" style=display:none;>
+                <canvas id="mycanvas" width="1000" height="400 "></canvas>
+                <canvas id="incomeChart" width="1000" height="400"></canvas>
+            </div>
         </div>
 </body>
 </html>

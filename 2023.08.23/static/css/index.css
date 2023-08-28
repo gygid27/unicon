@@ -1,64 +1,68 @@
-* {
+/* * {
     padding: 0;
     margin: 0;
     box-sizing: 0;
 }
 
-/* li 직접주는 것 보단 ul 태그로 주는것도 방법*/ ul{
-    list-style-type: none;
-}
+li 직접주는 것 보단 ul 태그로 주는것도 방법 ul{
+    /* list-style-type: none;
+} */
 
-#wrap {
-    /* width: 900px; */ width:100%;
+/* #wrap {
+    width: 900px; width:100%;
     margin: 0 auto;
     /*접혀있을 때, 펼쳤을 때를 위한 것?*/
-    max-width:1000px;
-    min-width:700px;
-}
+    /* max-width:1000px;
+    min-width:700px; */
 
-.sideclose{
+
+/* .sideclose{
     position:absolute;
     background:#F4EEEE;
-    width:300px;
+    width:325px;
     height:100%;
-    /* padding:0 70px;   점점 검색크기가 줄어짐*/
-    margin:0 12px;
-    left:-350px;
+    /* padding:0 70px;   점점 검색크기가 줄어짐 이거 쓰면 안됌*/
+    /* margin:0 12px; */
+    /* left:-350px;
     translate: left 0.5 ease;
-}
+} */
 
-.close{/*접혀있을 때 아이콘모습*/
-    position:absolute;
+/* .close{/*접혀있을 때 아이콘모습*/
+    /* position:absolute;
     left:350px;
     top:5px;
     cursor:pointer;
     translate:left 1s ease 0.5s;
+} */ 
+/* 
+.open{left:-9px; top:5px; color:black;}
+.sideopen{/*펼쳐질때 아이콘 모습*/
+    /* left:0; 
 }
 
-.open{left:50px; color:#FAF1E4;}
+/* #word_box{
+    margin:20px 59px;
+} */
 
-#word_box{
-    margin:0 30px;
-}
-
-#side #icon {
+/* #side #icon {
     font-size: 50px;
-    padding: 0 15px;
-}
-#word {
+    padding: 0 15px; 
+} *
+/* #word {
     border: none;
     border-radius: 10px;
     width: 230px;
     height: 30px;
     margin-top:15px;
+    padding:0 13px;
     
-}
+}  */
 
-#side h3 {
-    padding: 20px 0;
+/* #side h3 {
+    padding: 14px 0;
     border-top: 1px solid rgb(164, 152, 152);
     margin-top:20px;
-    margin:30px auto;
+    margin:2px auto;
     text-align: center;
 }
 
@@ -69,13 +73,11 @@
     font-weight: 800;
 }
 
-#category li{
-    display:flex;
-}
 
 #money_box{
     text-align:center;
-    margin-top:20px;
+    margin-top:40px;
+    padding:30px 0;
     
 
 }
@@ -87,9 +89,138 @@
     border:none;
     border-radius: 10px;
     padding:0 10px;
-
     
-}
+    
+} */
 /* input박스의 checkbox에 크기,높이주고 싶을 떄 이거 참조하기
 #category input[type=checkbox]{
     height:17px;width:17px; */
+/* #bt_box a{
+        color:#222845; font-weight: 800; font-size:20px;
+        text-decoration: none; border:1px solid #222845;
+        background:rgb(195, 243, 212); border-radius: 5px;
+        width:80px;    padding:5px 0; text-align: center;}
+/* WAZSEXDASDFGHJKL;QWERTYUIO'ZXCVBNM,. 유니콘은 살아있어} */
+    /* #bt_box a:hover{color:rgb(195, 243, 212);;background:#222845;
+    border:1px solid rgb(195, 243, 212);} */
+
+
+/* #mychart{
+    width:1000px;
+    height:600px; 
+} */
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+ul{list-style-type: none;}
+#wrap{
+    width:800px;
+    max-width:1000px;
+    min-width:700px;
+    margin: 0 auto;
+    
+}
+.noneactive{ margin:0 auto;}
+.sideclose{/*side  접혀있는 모습  */
+    position:absolute;
+    left:-300px; top:0;
+    padding:100px 50px;
+    display:flex;
+    flex-direction: column;
+    background:#222845;    color:#fff;
+    height:1500px;    row-gap:20px;    width:300px;
+    transition: left 1s ease;
+}
+.close{ /* 접혀있을때 아이콘 모습 */
+    position:absolute;
+    top:45px;left:350px;color:#222845;
+    font-size:30px;    cursor:pointer;
+    transition: left 1s ease 0.5s;
+}
+.open{    left:50px;color:#fff;} /*  펼쳐 질때 아이콘 모습 */
+.sideopen{    left:0;  }   /* side 펼치면  */
+@media screen and (max-width:1600px){
+    .sideactive{
+        margin-left:300px;
+    }
+}
+#word, #money{
+    height:30px; 
+    border-radius: 5px; 
+    padding:0 5px; 
+    outline: none;
+    border:0;
+    font-size:17px;
+}
+#side h3{border-top:2px solid #aaa; padding-top:10px;}
+#category li{
+    display:flex; align-items: center;
+    column-gap: 10px;
+    padding:2px 0;
+}
+#category input[type=checkbox]{
+    height:17px;width:17px;
+}
+#money{
+    width:150px;
+}
+
+
+#main{
+    width:800px;
+    margin:10px auto;
+}
+.title{
+    margin-top:30px ;
+}
+.title span{text-align: center; font-size:17px; font-weight:800;border-bottom:2px solid #aaa;}
+.categoryText{display:inline-block; width:20%;padding:3px 10px; border-right:1px solid #aaa;}
+.moneyText{display:inline-block; text-align:right;width:20%;padding:3px 10px; border-right:1px solid #aaa;}
+.detailText{display:inline-block; width:60%;padding:3px 10px;}
+.detail{
+
+}
+.detail:nth-child(even){
+    background:#ddd;
+}
+#bt_box{
+    display:flex;
+    justify-content: space-between;
+}
+#bt_box a{
+    color:#222845; font-weight: 800; font-size:20px;
+    text-decoration: none; border:1px solid #222845;
+    background:rgb(195, 243, 212); border-radius: 5px;
+    width:80px;    padding:5px 0; text-align: center;
+}
+#bt_box a:hover{color:rgb(195, 243, 212);;background:#222845;
+border:1px solid rgb(195, 243, 212);}
+#mychart{
+    width:1000px;
+    height:600px;
+}
+#bt_box{
+    display:flex;
+    justify-content: space-between;
+}
+#bt_box a{
+    color:#222845; font-weight: 800; font-size:20px;
+    text-decoration: none; border:1px solid #222845;
+    background:rgb(195, 243, 212); border-radius: 5px;
+    width:80px;    padding:5px 0; text-align: center;
+}
+#bt_box a:hover{color:rgb(195, 243, 212);;background:#222845;
+border:1px solid rgb(195, 243, 212);}
+#mychart{
+    width:1000px;
+    height:400px;
+}
+
+#incomeChart{
+    width:1000px;
+    height:400px;
+}
