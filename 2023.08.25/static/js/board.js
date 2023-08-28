@@ -30,7 +30,7 @@ const board_img = [
 ];
 
 const board = [];
-const gamer = [];
+var gamer = [];
 
 $(function () {
     board.fill(0);
