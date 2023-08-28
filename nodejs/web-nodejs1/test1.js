@@ -15,23 +15,62 @@
 var http = require('http');
 //작은 따옴표만 사용하기 자바스크립, nodejs
 var fs = require('fs');
+var url = require('url');
+
 var app = http.createServer(function (request, response) {
-    var url = request.url;
+    var _url = request.url;
+    var query = url.parse(_url, true).query;
+    // console.log(query.part);
+    var title = query.part;
     if (request.url == '/') {
-        url = '/index.html';
+        title = 'nodeJS 테스트';
     }
     if (request.url == '/login') {
-        url = '/login.html';
+        _url = '/login.html';
     }
     if (request.url == '/favicon.ico') {
         return response.writeHead(404);
+        //오류가 발생했을 때
     }
     response.writeHead(200);
-    response.end(fs.readFileSync(__dirname + url));
+    fs.readFile(`./${query.part}`, 'utf8', function (err, desct) {
+        if (desct == undefined)
+            desct = `
+            <ol>
+                <li>테스트</li>
+                <li>테스트2</li>
+                <li>테스트3</li>
+            </ol>`;
+
+        var tmp = `
+    <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <a href="/">HOME</a>
+        <a href="/login">로그인</a>
+        <a href="?part=notice">공지사항</a>
+        <a href="?part=freeBoard">자유게시판</a>
+        <!--html이동하는 또다른 방법 part파라미터 ?쿼리스트리밍-->
+        <h1>${title}</h1>
+        <p>${desct || err}</p>
+    </body>
+</html>
+`;
+        response.end(tmp);
+    });
 });
+
 app.listen(3000);
+//<내가 코딩이 안돼는 이유>
 //html과 js모두 같은 폴더에 있어야 한다. 오타, 추가로 내용을 넣었을 때 test1.js로 다시 입력해주기
-//http://localhost:3000/
+//ctrl+c누르고 처음부터 다시 시작
+//주소를 다시 적기 //http://localhost:3000/ 이 부분 다시 입력해주기
+
 //터미널에서 서버중단,강제 종료하는 법 ctrl+c
 // if (request.url == '/') {
 //     url = '/index.html'; '/'이거를 가져오면 /index.html를 쓰자
