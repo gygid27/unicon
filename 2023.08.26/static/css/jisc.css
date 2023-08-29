@@ -1,0 +1,805 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#wrap {
+    width: 100%;
+    /*처음 100%로 margin:0 auto를 주면 margin이 움직이지 않는다.
+    왜? 100%로 꽉 찬 상태여서 px로 줘야지 margin:0 auto가 움직이는 것이다.*/
+
+}
+
+/*실수! css로 뒷배경을 넣어야 할 때에는 wrap과 header사이에
+header_box를 넣여야 사진을 넣을 수 있다.*/
+
+#header_box {
+    background-image: url(../image/6.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 330px;
+    /*사진의 너비는 wrap의100%으로 갔기 떄문에
+    높이를 줘서 사진의 크기를 맞춘다.*/
+
+
+}
+
+#header {
+    width: 900px;
+    /* height:1000px; 이 부분 실수*/
+    margin: 0 auto;
+    margin-top: 60px;
+
+}
+
+#header #jisc_box {
+    position: absolute;
+    top: 15px;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    padding: 10px 0;
+    font-weight: 700;
+}
+
+#main_info {
+    /*너비 높이를 줘야 h1,a태그가 있어야 글자들이 움직인다.*/
+    width: 500px;
+    height: 100%;
+    margin: 30px 71px;
+    padding: 80px 0;
+    color: white; 
+    /* margin-top:18px;*/
+} 
+
+.info_p {
+    color: white;
+    padding: 25px 0;
+    font-size: 40px;
+}
+
+.info_a {
+    color: white;
+    padding: 0 3px;
+    font-size: 20px;
+}
+
+.info_a:hover {
+    color: #ddd;
+    /*마우스를 올리면 색깔이 변할 수 있는 부분*/
+}
+
+#input_box {
+    width: 100%;
+    background-color: lightgoldenrodyellow;
+}
+
+#search_box {
+    width: 100%;
+    height: 75px;
+    background-color: khaki;
+    position: relative;
+
+}
+
+#search_box label {
+    position: absolute;
+    left: 380px;
+    top: 25px;
+    font-weight: 100;
+    font-size: 19px;
+
+
+}
+
+/* .search{
+    width:700px;
+    padding:20px 340px;
+    
+} */
+/*까먹지 말자 placeholder주면 검색창 네모칸에 글씨 쓸 수 있다.
+이거와 search 태그 밑에 label를 넣어주고 css로는 position으로 주면서 만드는 방법도 있다.*/
+
+/* .search{
+    width:800px;
+    margin:10px 15px;
+} */
+
+#Jisc_search {
+    width: 500px;
+    height: 35px;
+    border: none;
+    margin: 20px 370px;
+
+}
+
+#Jisc_search:focus+label {
+    display: none;
+}
+
+
+
+/* .Jisc_search[placeholder]{
+    
+    color:red;
+}
+속성을 주고 싶을 때 []안에 넣어주기 
+죄다 오답*/
+
+#section1 {
+    width: 100%;
+    margin: 0 auto;
+    height:400px;
+    /*title_sub가 움직이지 않는 뻘짓한 이유는 위에 전체를 감싸는 태그에 margin:0 auto을 주지 않았기 떄문*/
+
+}
+
+.title_sub {
+    text-align: center;
+    /*글씨를 가운데로 움직이는 가장 좋은 방법은 text-align으로 해보고 안돼면 padding, margin써라*/
+    margin: 40px 50px;
+    font-size: 28px;
+    color: grey;
+    font-weight: 100;
+}
+
+.element_explain {
+    width:1000px;
+    display: flex;
+    /* isplay:grid;d */
+    align-items:center;
+} 
+
+
+
+.element {
+    width: 50%;
+    /*500px 또는 50%둘다 가능하다*/
+    display: flex;
+    /* justify-content:space-around
+    또 습관처럼 저스티피줌 봐가면서하라고... */
+    /* margin:0 15px; */
+    padding: 10px 0;
+    /* text-align: center; */
+
+}
+
+
+
+.icon {
+    padding: 0 15px;
+    font-size: 20px;
+    color: lightblue;
+}
+
+.title {
+    width: 500px;
+}
+
+.title .sub {
+    color: rgba(36, 36, 201, 0.936);
+
+}
+
+.title .add {
+    padding: 5px 0;
+    color: #afabab;
+    font-weight: 100;
+}
+
+#bottom_color {
+    /* width:1900px; */
+    /* height:115px; */
+    background: #ddd;
+    position: relative;
+    right: 180px;
+    margin-top: 28px;
+    /* margin:0 auto; */
+
+}
+
+#color_element {
+    width: 1020px;
+    display: flex;
+    height: 125px;
+    /* position:relative; */
+}
+
+.element_1 {
+    /* width:500px; */
+    display: flex;
+    margin: 35px 172px;
+}
+
+.element_2 {
+    display: flex;
+    margin: 35px -262px;
+}
+
+
+
+
+
+#section2 {
+    width: 100%;
+
+}
+
+#section2_box {
+    background-image: url(../image/7.jpg);
+    background-size: cover;
+    height: 450px;
+    color: white;
+}
+
+#section2_titlebox {
+    width: 750px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+#section2_titlebox .title2 {
+    font-size: 20px;
+    padding: 15px 0;
+}
+
+#section2_titlebox .title3 {
+    font-size: 65px;
+    font-weight: 300;
+}
+
+#section2_titlebox .title4 {
+    color: white;
+    font-size: 17px;
+}
+
+#section2_titlebox .title4:hover {
+    color: #ddd;
+}
+
+#section3 {
+    width: 100%;
+    /* margin:0 auto; */
+    height: 250px;
+
+}
+
+#section3_box {
+    width: 800px;
+    display: flex;
+    /* justify-content: center; */
+    margin: 20px 243px;
+}
+
+.info_img img {
+    width: 300px;
+    height: 230px;
+}
+
+#explain_info {
+    padding: 0 40px;
+}
+
+.main_sub {
+    font-size: 28px;
+    font-weight: 200;
+    padding: 10px 0;
+}
+
+.info_sub {
+    font-weight: 200;
+    padding: 10px 0;
+}
+
+.info_sub2 {
+    font-weight: 200;
+}
+
+.sub2:hover {
+    color: orange;
+}
+
+/* 새롭게 알게된 사실: 위에  .info_sub2 라고 하면 앞에 어디에 포함되었는지 표시하는 .info_sub2 .sub2 이렇게 해서 hover를 넣으면 hover가 작동되지 않는다.
+    #section2_titlebox .title4  #section2_titlebox .title4:hover 이렇게 해주든가  .info_sub2  .sub2 이렇게 해서 hover넣어주기
+   */
+
+#section4 {
+    width: 100%;
+    height: 340px;
+    background-color: rgb(243, 241, 241);
+
+}
+
+/*support와 support_element를 감싸주는 태그가 없으니!!!!!!! 전체를 옮길 수 없었다 그만좀 실수해라이 -_-*/
+
+#section4_box {
+    width: 500px;
+    padding: 50px 0;
+    margin: 0 400px;
+    /*넓이가 넓을 수록 가운데로 가지 않고 왼쪽에 머물른다. 넓이를 적게 주면서 확인하면서 다시 해보기*/
+}
+
+.support {
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 25px;
+    /* margin-top:30px; */
+}
+
+#support_element {
+    /* width:900px; */
+    text-align: center;
+    /* flex-wrap:wrap; */
+}
+
+.word_box {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    /*column gap을 주면 글자 간격 사이사이를 띄어줄 수 있다.*/
+
+    font-weight: 100;
+    padding: 10px 0;
+    color: navy;
+
+
+}
+
+.word {
+    border: 1px solid navy;
+    border-radius: 3px;
+    width: 130px;
+    height: 27px;
+    /* line-height:-10px; */
+    padding: 3px 0;
+    font-size: 13px;
+}
+
+.word:hover {
+    color: white;
+    background: navy;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.word:nth-child(3) {
+    width: 90px;
+    height: 27px;
+    border-radius: 3px;
+}
+
+
+.word_box2 {
+    width: 480px;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    padding: 10px 0;
+    font-size: 13px;
+    font-weight: 100;
+    /* margin:0 -80px; */
+    color: navy;
+
+}
+
+.word2:nth-child(1) {
+    width: 70px;
+    height: 27px;
+    border: 1px solid navy;
+    border-radius: 3px;
+    padding: 3px 0;
+}
+
+.word2:nth-child(3) {
+    width: 70px;
+    height: 27px;
+    border: 1px solid navy;
+    border-radius: 3px;
+    padding: 3px 0;
+}
+
+.word2:nth-child(2) {
+    width: 135px;
+    height: 27px;
+    border: 1px solid navy;
+    border-radius: 3px;
+    padding: 3px 0;
+}
+
+.word2:nth-child(4) {
+    width: 70px;
+    height: 27px;
+    border: 1px solid navy;
+    border-radius: 3px;
+    padding: 3px 0;
+}
+
+.word2:nth-child(5) {
+    width: 70px;
+    height: 27px;
+    border: 1px solid navy;
+    border-radius: 3px;
+    padding: 3px 0;
+}
+
+.word2:hover {
+    color: white;
+    background: navy;
+    cursor: pointer;
+}
+
+.word_box3 {
+    width: 800px;
+    margin: 0 -170px;
+    font-size: 13px;
+    /* height:30px; */
+    /* text-align: center; */
+    /* padding:-50px 0; 뻘짓을 남겨놓은다... */
+}
+
+.add_info_a {
+    padding: 7px 0;
+}
+
+.word_box3 .add_info_a:hover {
+    color: orange;
+}
+
+#section5 {
+    width: 100%;
+    height: 550px;
+    background: #ddd;
+}
+
+#section5_box {
+    width: 700px;
+    margin: 0 auto;
+    /*여기는 건들면 안됌 그럼 전체가 아래로 내려간다.*/
+}
+
+
+
+
+
+
+.training {
+    width: 500px;
+    height: 100px;
+    font-size: 28px;
+    padding: 60px 3px;
+    /* margin-top:30px; */
+    /*높이를 줘서 그만큼 내려오게 해야지 멍충아!!!!!!!!!!
+    내려오게 하는 건 padding 자기 자신을 내려오게 해야지..*/
+    font-weight: 100;
+}
+
+#training_box {
+    width: 1503px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.become_box {
+    width: 250px;
+    position: relative;
+}
+
+.become_box .training_img img {
+    width: 230px;
+    height: 170px;
+
+}
+
+.engaging_box {
+    width: 250px;
+    position: relative;
+}
+
+.engaging_box .training_img img {
+    width: 230px;
+    height: 170px;
+
+}
+
+
+.preparing_box {
+    width: 250px;
+    position: relative;
+}
+
+.preparing_box .training_img img {
+    width: 230px;
+    height: 170px;
+
+}
+
+
+.add_explain {
+    width: 230px;
+    height: 130px;
+    background-color: white;
+    position: relative;
+    bottom: 10px;
+}
+
+.main_title {
+    font-size: 15px;
+    text-align: left;
+    padding: 10px 14px;
+}
+
+.tr_addinfo {
+    font-size: 13px;
+    font-weight: 100;
+    padding: 0 14px;
+}
+
+.tr_addinfo:hover {
+    color: orange;
+}
+
+.date {
+    font-size: 10px;
+    padding: 12px 14px;
+    font-weight: 100;
+    color: grey;
+}
+
+#view {
+    width:120px;
+    position: relative;
+    top: 350px;
+    right: 450px;
+    align-self: baseline;
+    /*flex로 준 뒤로 align-self 혼자만 움직이고 싶을 때 쓰는 것이다 
+    그 밑에 hover움직이 않는 이유는 높이를 너무많이 줬기 때문이다.*/
+}
+
+#view:hover {
+    color: orange;
+}
+
+#section6 {
+    width: 100%;
+    height: 250px;
+}
+
+#section6_box {
+    width: 500px;
+    margin: 40px auto;
+}
+
+#icon_box {
+    font-size: 25px;
+    width: 100px;
+    margin: 0 250px;
+}
+
+.latest {
+    width: 200px;
+    font-size: 30px;
+    margin: 6px 180px;
+}
+
+.keep {
+    width: 500px;
+    text-align: center;
+    margin: 18px 5px;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.browse {
+    width: 120px;
+    height: 28px;
+    margin: 0 200px;
+    font-weight: 100;
+    border: 1px solid navy;
+    border-radius: 3px;
+    font-size: 13px;
+    padding: 3px 14px;
+    color: navy;
+}
+
+.browse:hover {
+    color: white;
+    background: navy;
+    cursor: pointer;
+} 
+
+#section7 {
+    width: 100%;
+    height: 350px;
+    background-color: rgb(50, 50, 176);
+}
+
+#section7_box {
+    text-align: center;
+    width: 500px;
+    margin: -10px auto; 
+    /*이건 section7의 전체 범위를 움직이는 부분이므로 건들지말것*/
+    padding:50px 0;
+    /*제발 기억해라... 글자를 아래로 내려두고 싶음 자기 자신!*/
+}
+
+.main_Jisc{
+    font-size:30px;
+    color:white;
+    padding:10px 0;
+}
+
+.add_hesa{
+    font-size:20px;
+    color:white;
+    padding:26px 0;
+}
+
+.hesa_website{
+    width:195px;
+    height:30px; 
+    border:1px solid white;
+    color:white;
+    font-size:14px;
+    /* padding:0 20px; */
+    margin:0 150px;
+    border-radius: 3px;
+    padding:3px 0;
+    font-weight:100;
+    text-align:center;
+
+}
+
+.hesa_website:hover{
+    color:white;
+    background:blue;
+}
+
+#section8{
+    width:100%;
+    height:180px;
+    background:rgb(244, 236, 236);
+}
+
+#section8_box{
+    width:900px;
+    margin:0 auto;
+    display:flex;
+    padding:30px 0;
+    justify-content:space-evenly; 
+}
+
+.contact_box{
+    width:300px;}
+    
+
+
+
+.contact_sub{
+    font-size:25px;
+    padding:10px 0;
+}
+
+.contact_info{
+    margin:0 -6px;
+} 
+/*ㅜㅜ 부모태그의 마진은 자식들을 한번에 움직일 수 있다고 엉엉 멍청아 그걸 지금아냐 ㅠㅠㅠ*/
+
+/* .visit_box{
+    margin:0 -50px;
+} */
+
+
+
+.icon_part{
+    width:200px;
+    /* margin-right:3px; */
+    padding:3px 1px;
+    color:blue;
+}
+
+.icon_part i{
+    padding: 5px;
+}
+
+.letter{
+    color:blue;
+    font-weight: 100;
+} 
+
+.letter:hover{
+    color:orange;
+}
+
+#footer{
+    width:100%;
+    height:340px;
+    background-color:grey;
+}
+
+#footer_box{
+    width:800px;
+    margin:0px auto;
+    display:flex;
+    padding:40px 0;
+    justify-content:space-around;
+    /* align-items:center; */
+}
+
+.foot_main_title{
+    /* text-align: center; */
+    padding:5px 0; 
+    font-size:15px;
+    font-weight: 100;
+    color:white;
+}
+
+.list{
+    padding:1px 0;
+    font-weight: 500;
+}
+
+
+
+.list_letter{
+    color:white;
+    font-size:10px;
+}
+
+.list_letter:hover{
+    color:black;
+}
+
+.sns{
+    margin:1px 0;
+    padding:1px 0;
+}
+
+.sns i{
+    font-size:10px;
+    color:white;
+    padding:0 4px;
+}
+
+.sns_box{
+    color:white;
+    font-size:10px;
+}
+
+.sns_box:hover{
+    color:black;
+}
+
+#footer2{
+    width:100%;
+    height:50px;
+    background-color:rgb(30, 16, 91);;
+}
+
+#copyright{
+    margin:0 55px;
+}
+
+ul{
+    width:900px;
+    list-style-type: none;
+    display:flex;
+    justify-content: center;
+    padding:16px 20px;
+    font-size:13px;
+}
+
+.last_info{
+    padding:0 10px;
+    color:white;
+    font-weight: 100;
+}
+
+ul a{
+    color:white;
+}
