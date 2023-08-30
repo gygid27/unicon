@@ -1,12 +1,16 @@
+#main {
+    margin: 20px 0;
+}
+
 #content {
-    width: 600px;
+    width: 1000px;
     height: 300px;
     margin: 0 auto;
     background-color: antiquewhite;
 }
 
 #content h3 {
-    text-align: left;
+    text-align: center;
     padding: 9px 50px;
     border-bottom: 2px solid burlywood;
     /* background-color: ; */
@@ -14,7 +18,7 @@
 
 #sign_wrap {
     width: 100%;
-    margin: 20px 40px;
+    margin: 40px 273px;
     /* padding:10px 0; 전체의 웹이움직임 생각하고 하자 */
     /* display:flex;
     flex-direction: column; */
@@ -35,7 +39,7 @@
     justify-content: space-between;  */
     /* row-gap: 20px;
     column-gap: 20px;  */
-    padding: 5px 0;
+    padding: 10px 0;
 }
 
 #email {
@@ -81,19 +85,20 @@
 }
 
 .sign_bt_part {
-    margin: 5px 450px;
-    padding: 7px 0;
+    margin: -60px 497px;
+    padding: 29px;
 }
 
 .sign_bt {
     /* margin:10px 0; */
     text-decoration: none;
     display: inline-block;
-    width: 90px;
-    height: 30px;
-    background-color: lemonchiffon;
+    width: 133px;
+    height: 42px;
+    background-color: rgb(199, 191, 118);
     color: black;
+    font-weight: 900;
     text-align: center;
     margin: 5px 0;
-    padding: 5px 0;
+    padding: 9px 0;
 }

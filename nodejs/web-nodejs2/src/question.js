@@ -40,12 +40,9 @@ $(async function () {
                 '<td class="qsWriter">' +
                 item.writer +
                 '</td>' +
-                '<td class="qsContent">' +
-                item.content +
-                '</td>' +
                 '<td class="qsDate">' +
                 item.date +
-                '</td>' +
+                '</td>' +w
                 '<td class="qsTo">' +
                 item.to +
                 '</td>' +
