@@ -45,15 +45,16 @@ var app = http.createServer(function (request, response) {
             }
             url = '/src/' + page + '.html';
         }
+        if (page === 'logout') url = '/src/index.html';
         response.writeHead(200, {
             'Set-Cookie': ['isLogin=' + isLogin, 'id=' + id],
         });
     }
     if (url == '/favicon.ico') return response.writeHead(404);
 
-    console.log(request.headers.cookie);
+    // console.log(request.headers.cookie);
     // var cookies = {};
-    cookies = cookie.parse(request.headers.cookie); // 내 pc에 저장된 쿠키를 가져와 객체로 저장
+    // cookies = cookie.parse(request.headers.cookie); // 내 pc에 저장된 쿠키를 가져와 객체로 저장
     // console.log(cookies.id);
 
     // , {

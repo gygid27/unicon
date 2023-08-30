@@ -10,7 +10,8 @@
             integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
             crossorigin="anonymous"
         ></script>
-        <script>
+        <script src="./src/func.js">
+
             // parse = function (href) {
             //     //url이라는 객체의 prototype에 등록 url의 원본 객체  parse 추가한다.
             //     var tmp = href.split('?')[1];
@@ -41,24 +42,65 @@
             //     if (isSuccess) document.write('로그인성공');
             //     else document.write('로그인실패');
             // });
-            function getCookie(name) {
-                var cookies = document.cookie.split(';');
-                for (var i in cookies) {
-                    var cookie = cookies[i].trim();
-                    //trim은 공백제거
-                    if (cookie.startsWith(name + '=')) {
-                        return cookie.substring(name.length + 1, cookie.length);
-                    }
-                }
-                return '';
-            }
-            var isLogin = getCookie('isLogin');
-            var id = getCookie('id');
 
-            document.write(isLogin + ' ' + id);
+            // function getCookie(name) {
+            //     var cookies = document.cookie.split(';');
+            //     for (var i in cookies) {
+            //         var cookie = cookies[i].trim();
+            //         //trim은 공백제거
+            //         if (cookie.startsWith(name + '=')) {
+            //             return cookie.substring(name.length + 1, cookie.length);
+            //         }
+            //     }
+            //     return '';
+            // }
+            // import getCookie from './src/fun.js';
+            // var isLogin = getCookie('isLogin');
+            // var id = getCookie('id');
+
+            // document.write(isLogin + ' ' + id);
         </script>
+        <script>
+            $(function () {
+                var isLogin = getCookie('isLogin');
+                var id = getCookie('id');
+                if (isLogin == 'false') {
+                    $('#login_result').append('<h2>로그인 실패</h2>' + '<a href="/login">다시 로그인하기</a>');
+                } else {
+                    $('#login_result').append('<h2>로그인 성공</h2>');
+                    setTimeout(function () {
+                        //로그인성공하면 3초뒤에 첫페이지 이동
+                        location.href = '/';
+                    }, 3000);
+                }
+            });
+
+            // document.write(isLogin + ' ' + id);
+        </script>
+        <style>
+            body {
+                background: #ef7a7a;
+                height: 100vh;
+            }
+            #login_result {
+                width: 500px;
+                color: #fff;
+                text-align: center;
+                position: relative;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            #login_result h2 {
+                font-size: 30px;
+                font-weight: 800;
+            }
+            #login_result a {
+                color: #fff;
+            }
+        </style>
     </head>
     <body>
-        <h3>로그인 처리하는 페이지</h3>
+        <div id="login_result"></div>
     </body>
 </html>
