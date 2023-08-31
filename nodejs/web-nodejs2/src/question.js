@@ -42,7 +42,8 @@ $(async function () {
                 '</td>' +
                 '<td class="qsDate">' +
                 item.date +
-                '</td>' +w
+                '</td>' +
+                w +
                 '<td class="qsTo">' +
                 item.to +
                 '</td>' +
@@ -77,12 +78,12 @@ $(async function () {
 function questionWrite() {
     if (isLogin) {
         //로그인 성공인 상태
-        $('#qsModal').show();
+        $('#qsModal').fadeIn();
     } else {
         //로그인 안한 상태
         var isOk = confirm('로그안 후 문의하기 할 수 있습니다. \n 로그인 하시겠습니까?');
         if (isOk) {
-            location.href = '/login';
+            location.href = '/?sub=question';
             //location 사이트 이동경로
         }
     }

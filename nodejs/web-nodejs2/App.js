@@ -23,34 +23,49 @@ const data = JSON.parse(fs.readFileSync('./data/member.json', 'utf8'));
 var app = http.createServer(function (request, response) {
     var url = request.url;
     var query = tempUrl.parse(url, true).query;
+    //console.log(Object.keys(query).length == 0); 객체에 값이 있는지 없는 지 확인하ㅡㄴ 방법
     // console.log(query.part);
-    if (query.part == undefined) {
+    if (Object.keys(query).length == 0) {
         if (url == '/') url = '/src/index.html';
         if (url == '/sign') url = '/src/signup.html';
         if (url == '/qs') url = '/src/question.html';
         if (url == '/login') url = '/src/login.html';
         response.writeHead(200);
     } else {
-        var page = query.part;
-        var isLogin = 'false';
-        var id = '';
+        //쿼리스트링이 있는 경우
+        var page = query.part == undefined ? '' : query.part;
+        var sub = query.sub == undefined ? '' : query.sub;
+        var cookie_arr = [];
+        if (sub === 'question') {
+            //페이지 경로가 바뀌는 경우 , 주소가 바뀌는 것이 아니다
+            cookie_arr = ['sub=qs'];
+            url = '/src/login.html';
+        }
         if (page === 'login_check') {
+            cookie_arr = ['isLogin=false', 'id=""'];
             for (var i in data) {
                 if (data[i].sdmId === query.sdmId && data[i].sdmPw === query.sdmPw) {
-                    isLogin = 'true'; //아이디 비번 일치하면 쿠키생성
-                    id = query.sdmId;
+                    cookie_arr = ['isLogin=true', 'id=' + query.sdmId];
+
+                    //isLogin = 'true'; //아이디 비번 일치하면 쿠키생성
+                    //id = query.sdmId;
 
                     break;
                 }
             }
             url = '/src/' + page + '.html';
         }
-        if (page === 'logout') url = '/src/index.html';
+        if (page === 'logout') {
+            cookie_arr = ['isLogin=false'];
+            url = '/src/index.html';
+        }
         response.writeHead(200, {
-            'Set-Cookie': ['isLogin=' + isLogin, 'id=' + id],
+            'Set-Cookie': cookie_arr,
         });
     }
-    if (url == '/favicon.ico') return response.writeHead(404);
+    if (request.url == '/favicon.ico') {
+        return response.writeHead(404);
+    }
 
     // console.log(request.headers.cookie);
     // var cookies = {};

@@ -1,0 +1,21 @@
+#main img {
+    width: 100%;
+}
+
+#side .login_bt {
+    padding: 5px 10px;
+}
+
+#side .login_bt a {
+    width: 100%;
+    height: 35px;
+    margin: 0 10px;
+    padding: 5px 20px;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    background-color: pink;
+    border: 1px solid pink;
+    text-align: center;
+    border-radius: 4px;
+}
