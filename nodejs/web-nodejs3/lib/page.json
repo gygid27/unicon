@@ -9,7 +9,7 @@
         "text": "로그인"
     },
     "login_after": {
-        "url": "loginout",
+        "url": "logout",
         "text": "로그아웃"
     }
 }

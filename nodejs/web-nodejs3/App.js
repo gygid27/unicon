@@ -2,44 +2,44 @@ const http = require('http');
 const fs = require('fs');
 const url = require('url');
 const template = require('./lib/template.js');
-
+const JStemp = require('./lib/JStemplate.js');
+const dataParse = JSON.parse(fs.readFileSync('./lib/page.json', 'utf-8'));
+const member = JSON.parse(fs.readFileSync('./lib/member.json', 'utf8'));
 const app = http.createServer(function (request, response) {
     const pageURL = request.url;
     const query = url.parse(pageURL, true).query; //쿼리스트리밍
     const path = url.parse(pageURL, true).pathname; // 루트도메인 뒤 주소
-
-    if (path === '/') {
-        fs.readFile('./lib/page.json', 'utf8', function (err, data) {
-            const dataParse = JSON.parse(data);
-            const html = template.homeHTML(dataParse.main, dataParse.login_before);
-            response.writeHead(200);
-            response.write(html);
-            response.end();
-        });
-    }
-    if (path === '/login') {
-        //로그인화면
-        fs.readFile('./lib/page.json', 'utf8', function (err, data) {
-            const dt = JSON.parse(data);
-            const h = template.loginHTML(dt.main);
-            response.writeHead(200);
-            response.write(h);
-            response.end();
-        });
-    }
-    if (path == '/sign') {
-        //회원가입 화면
-        fs.readFile('./lib/page.json', 'utf8', function (err, data) {
-            const dt = JSON.parse(data);
-            const h = template.signHTML(dt.main);
-            response.writeHead(200);
-            response.write(h);
-            response.end();
-        });
-    }
-    if (path == '/qs') {
-        var qdata = JSON.parse(fs.readFileSync('./lib/question.json', 'utf8'));
-        html = template.questionHTML(dataParse.main, dataParse.login_before, qdata);
+    let cookie_arr = [];
+    if (path.indexOf('.') == -1) {
+        var html = '';
+        if (path === '/') {
+            if (query.sdmId == undefined) html = template.homeHTML(dataParse.main, dataParse.login_before);
+            else {
+                //파라미터에 id가 있다.
+                for (var m of member) {
+                    if (m.sdmId == query.sdmId && m.sdmPw == query.sdmPw) {
+                        cookie_arr = ['isLogin=true', 'id=' + query.sdmId];
+                        dataParse.login_after.id = query.sdmId;
+                        break;
+                    }
+                }
+                html = template.homeHTML(dataParse.main, dataParse.login_after);
+            }
+        }
+        if (path === '/sign') {
+            html = template.sighUpHTML(dataParse.main, dataParse.sign);
+        }
+        if (path === '/login') {
+            html = template.loginHTML(dataParse.main);
+            html += JStemp.login();
+        }
+        if (path === '/qs') {
+            var qdata = JSON.parse(fs.readFileSync('./lib/question.json', 'utf8'));
+            html = template.questionHTML(dataParse.main, dataParse.login_before, qdata);
+        }
+        response.writeHead(200, { 'Set-Cookie': cookie_arr });
+        response.write(html);
+        response.end();
     }
     if (path.indexOf('.css') > -1) {
         var css_name = path.slice('/lib'.length);
