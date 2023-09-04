@@ -59,6 +59,7 @@ var app = http.createServer(function (request, response) {
             cookie_arr = ['isLogin=false'];
             url = '/src/index.html';
         }
+        vue;
         response.writeHead(200, {
             'Set-Cookie': cookie_arr,
         });
