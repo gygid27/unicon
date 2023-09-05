@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>스즈메의 문단속</title>
+
+        <link rel="stylesheet" href="./src/main.css" />
+        <link rel="stylesheet" href="./src/sign.css" />
+    </head>
+    <body>
+        <div id="wrap">
+            <header id="header">
+                <div class="logo">
+                    <a href="/"><img src="./src/logo.PNG" /></a>
+                </div>
+                <nav class="nav">
+                    <ul class="menuList">
+                        <li class="menu"><a href="/studio">스튜디오</a></li>
+                        <li class="menu"><a href="/dress">드레스</a></li>
+                        <li class="menu"><a href="/makeup">메이크업</a></li>
+                        <li class="menu"><a href="/wedding">예식장</a></li>
+                        <li class="menu"><a href="/qs">Q&A</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main id="main">
+                <section id="content">
+                    <h3>스즈메 회원가입</h3>
+                    <form action="signf" id="signf" method="get" action="/signup">
+                        <div id="sign_wrap">
+                            <div id="sign_part">
+                                <div calss="sign_input">
+                                    <label for="email">이메일</label>
+                                    <input type="email" name="email" id="email" />
+                                </div>
+
+                                <div class="sign_input">
+                                    <label for="sdmPw">비밀번호</label>
+                                    <input type="password" name="password" id="password" />
+                                </div>
+                                <!--연락처는 밑에 번호 앞숫자 고르는 기능까지 넣어야 함-->
+                                <div class="sign_input">
+                                    <label for="sdmTel2">연락처</label>
+                                    <!--option안 value는 숫자 앞번호 넣으면 됨 생각 많이 ㄴㄴ-->
+                                    <!--select오타!!!!!!!주의-->
+                                    <select name="sdmTel1" id="sdmTel1">
+                                        <option value="010">010</option>
+                                        <option value="02">02</option>
+                                        <option value="032">032</option>
+                                        <option value="031">031</option>
+                                        <option value="033">033</option>
+                                        <option value="034">034</option>
+                                    </select>
+                                    - <input type="tel" name="sdmTel2" id="sdmTel2" /> -
+                                    <input type="tel" name="sdmTel3" id="sdmTel2" />
+                                </div>
+                                <div class="sign_input">
+                                    <label for="addr">신혼집 주소</label>
+                                    <input type="addr" name="addr" id="addr" />
+                                </div>
+                                <div class="sign_input">
+                                    <label for="wDate">결혼예정일</label>
+                                    <input type="date" name="wDate" id="wDate" />
+                                </div>
+                            </div>
+                            <div class="sign_bt_part">
+                                <a href="/signup" class="sign_bt">회원가입</a>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
