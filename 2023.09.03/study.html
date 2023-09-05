@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // function sayhello(name = 'friend'){
+    //     // let newname = name || "friend";
+    //     let msg = `hello, ${name}`
+    //     console.log(msg);
+    // }
+
+    // sayhello();
+    // sayhello('jane');
+
+    //return반환 하는  값
+    // function add(num1,num2){
+    //     return num1+num2;
+    // }
+
+    // const result = add(2,3)
+    // console.log(result);
+    //return문은 return오른쪽에 있는 값을 반환하는 것이다.
+    //함수를 종료하는 목적으로 사용하는 것이다
+
+
+    //함수 표현식
+    // let sayhello = function(){
+    //     console.log('hell0');
+    // }
+
+    // sayhello();
+
+    // //함수 선언문 어디서든동작 가능 
+    // // sayhello(); 위로 올라가서도 가능
+    // function sayHello(){
+    //     console.log('hello'); 
+    // }
+    // sayhello();
+
+    // //화살표함수
+    // let showError = () => {
+    //     console.log('error');
+    // }
+
+    //화살표 함수는 () 뒤에다 =>로 넣어주는 것이다
+    
+    
+    //객체
+    // const superman ={
+    //     name:'mike',
+    //     age:33,
+    // }
+
+    //접근 
+    // superman.name,
+    // superman['age']
+
+    // //추가
+    // superman.gender='male';
+    // superman.['hairColor']='black';
+
+    //  //property 존재 여부 확인
+    //  superman.birthday;
+
+    //  //in연산자를 활용해서 확인하기
+    // 'birthday' in superman;
+    // => false
+
+    //  'age' in superman;
+    // => true
+
+
+
+
+//객체로 받는거
+
+// function makeObject(name, age){
+//     return{
+//         name : name,
+//         age : age,
+//     }
+// }
+
+// const mike = makeObject('mike',30);
+// console.log(mike);
+
+// console.log( 'age' in Mike)
+// console.log('birthday' in mike)
+
+//나이를 확인하고 성인인지 아닌지 구분하기
+
+function isAdult(user){
+    if(!('age' in user) || user.age <20){
+        return false;
+    }return true;
+}
+
+const jane = {
+    name:'jane'
+};
+
+console.log(isAdult(jane))
+
+student.length//배열의 길이 반호ㅓㅏㄴ
+day.push() //배열뒤에 추가
+day.pop()//배열 뒤 제거 
+
+//배열은 for of로 써주기
+
+
+</script>
+<body>
+    
+</body>
+</html>
