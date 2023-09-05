@@ -1,4 +1,5 @@
 <template>
+    <b-icon icon="broadcast"></b-icon>
     <main id="main">
         <section id="content">
             <p class="sub">스즈메 with 로그인</p>

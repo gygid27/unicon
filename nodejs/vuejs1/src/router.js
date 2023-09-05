@@ -18,6 +18,17 @@ const routes = [
         name: 'SdmQuestion',
         component: () => import('@/components/SdmQuestion.vue'),
     },
+
+    {
+        path: '/dress',
+        name: 'SdmDress',
+        component: () => import('@/components/SdmDress.vue'),
+    },
+    {
+        path: '/makeup',
+        name: 'SdmMake',
+        component: () => import('@/components/SdmMake.vue'),
+    },
 ];
 
 const router = createRouter({

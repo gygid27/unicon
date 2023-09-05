@@ -1,4 +1,7 @@
 <template>
+    <!-- <b-button>버튼</b-button>
+    <b-icon incon="awrrow-up"></b-icon>
+    <b-icon incon="exclamation-triangle"></b-icon> -->
     <header id="header">
         <div class="logo">
             <a href="/"><img src="./assets/logo.png" /></a>
