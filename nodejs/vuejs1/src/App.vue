@@ -9,7 +9,7 @@
         <nav class="nav">
             <ul class="menuList">
                 <li class="menu"><a href="/studio">상수오빠랑결혼</a></li>
-                <li class="menu"><a href="/dress">드레스</a></li>
+                <li class="menu"><a href="/dress">상수오빠랑 키스 한날</a></li>
                 <li class="menu"><a href="/makeup">메이크업</a></li>
                 <li class="menu"><a href="/wedding">예식장</a></li>
                 <li class="menu"><a href="/qs">문의</a></li>
