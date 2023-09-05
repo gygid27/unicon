@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#main {
+    width: 2000px;
+    margin: 0 auto;
+}
+
+#content p {
+    text-align: left;
+    font-size: 25px;
+    margin-top: 30px;
+    padding: 20px 0;
+}
+
+.makeup_pic {
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 1500px; */
+}
+.makeup_pic img {
+    width: 500px;
+    height: 600px;
+    padding: 15px 15px;
+}

@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
+.dress_info ul li {
+    list-style: none;
+    font-size: 12px;
+}
+
+#main {
+    width: 1000px;
+}
+
+#content {
+    width: 1000px;
+}
+
+#content h2 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.dress_info p {
+    text-align: center;
+    margin: 30px;
+    font-size: 15px;
+}
+
+.dress_info ul {
+    display: flex;
+    padding: 17px 0;
+    width: 250px;
+    justify-content: space-around;
+    text-align: center;
+    margin: 0 381px;
+}
+
+.dress_info p:after {
+    content: '';
+    display: block;
+    width: 100px;
+    border-bottom: 1px solid black;
+    margin: 10px 420px;
+}
+
+.dress_info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 2000px;
+}
+
+.dress_pic img {
+    margin: 0 auto;
+    width: 500px;
+    height: 600px;
+    padding: 20px 15px;
+}
+
+#side .login_bt {
+    padding: 5px 10px;
+}
+
+#side .login_bt a {
+    width: 102px;
+    height: 39px;
+    margin: 0 10px;
+    padding: 5px 20px;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    background-color: pink;
+    border: 1px solid pink;
+    text-align: center;
+    border-radius: 4px;
+}

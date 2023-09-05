@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "sdmId": "gygid27@naver.com",
+        "sdmPw": "0207sun",
+        "tel": "010-1234-4567",
+        "addr": "대전 동구 용운동 주공1단지",
+        "wDate": "2021-08-23"
+    },
+    {
+        "id": 2,
+        "sdmId": "sss0114@naver.com",
+        "sdmPw": "sss0114s",
+        "tel": "010-1997-0114",
+        "addr": "대전 서구 변동 향기아파트2단지",
+        "wDate": "2021-07-23"
+    },
+    {
+        "id": 3,
+        "sdmId": "ses0512@naver.com",
+        "sdmPw": "ses0512s",
+        "tel": "010-1992-4567",
+        " addr": "대전 서구 태평동 아름아름아파트5단지",
+        "wDate": "2021-11-23"
+    },
+    {
+        "id": 4,
+        "sdmId": "jyerim1@naver.com",
+        "sdmPw": " 0908yymm",
+        " tel": "010-2000-0908",
+        " addr": "대전 중리동 예림아파트",
+        "wDate": "2021-09-23"
+    },
+    {
+        "id": 5,
+        "sdmId": "crabdog@naver.com",
+        "sdmPw": "0205crab",
+        "tel": "010-1987-0205",
+        "addr": "대전 중리동 단독주택단지 100평",
+        "wDate": "2018-03-23"
+    },
+    {
+        "id": 6,
+        "sdmId": "mcminji@naver.com",
+        "sdmPw": "0313mm",
+        " tel": "010-1234-1996",
+        "addr": "대전 동구 판암동 주공1단지",
+        "wDate": "2021-09-23"
+    },
+    {
+        "id": 7,
+        "sdmId": "jinohba@naver.com",
+        "sdmPw": "1204jjj",
+        "tel": "010-1992-1204",
+        "addr": "서울특별시 청담동 유엔빌리지",
+        "wDate": "2017-06-23"
+    },
+    {
+        "id": 8,
+        "sdmId": "tjsgy@naver.com",
+        "sdmPw": "0207twin",
+        "tel": "010-1234-4557",
+        "addr": "대전 동구 판암동 주공아파트6단지",
+        "wDate": "2021-02-07"
+    }
+]
