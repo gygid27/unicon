@@ -1,86 +1,72 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 //router 주된 역할은 올바른 경로 설정
-import HelloWorld from './components/HelloWorld.vue'
+import TopMenu from './components/TopMenu.vue'
 //스크립트 안에 들어가있는 것이 다르다
 </script>
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+    <div id="header_wrap">
+      <div class="logo">
+        <RouterLink to="/"><img src="@/assets/1.jpg" /></RouterLink>
+      </div>
+      <div class="menu_wrap">
+        <TopMenu />
+        <nav class="nav">
+          <div class="menu"><RouterLink to="/intro">센터소개</RouterLink></div>
+          <div class="menu"><RouterLink to="/information">동물보호정보</RouterLink></div>
+          <div class="menu"><RouterLink to="/adoption">입양</RouterLink></div>
+          <div class="menu"><RouterLink to="/join">참여소통</RouterLink></div>
+          <div class="menu"><RouterLink to="/park">반려동물공원</RouterLink></div>
+        </nav>
+      </div>
     </div>
   </header>
 
   <RouterView />
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+<style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
+#app {
   width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+  position: relative;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+header {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid black;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+#header_wrap {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 50px 0 25px 0;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+#header_wrap .logo {
+  width: 200px;
 }
 
-nav a:first-of-type {
-  border: 0;
+#header_wrap .logo img {
+  width: 100%;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+.menu_wrap {
+  width: 100%;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.menu_wrap .nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 </style>
