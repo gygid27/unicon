@@ -34,6 +34,7 @@ export default {
         date: date,
         completed: false
       })
+      console.log('멍충이' + todos.value[todos.value.length - 1].id)
       saveTodos(todos)
     }
     const removeTodo = (id) => {
@@ -50,6 +51,8 @@ export default {
     provide('addTodo', addTodo)
     provide('removeTodo', removeTodo)
     provide('completeTodo', completeTodo)
+
+    loadTodos(initTodos) // 할일 목록 불러오기
   }
 }
 </script>

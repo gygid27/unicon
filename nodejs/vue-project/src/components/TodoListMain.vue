@@ -50,7 +50,7 @@ export default {
         category: false
       },
       3: {
-        str: '오늘 할 일들',
+        str: '모든 할 일들',
         func: getAllTodo,
         category: false
       }
@@ -60,6 +60,7 @@ export default {
       return todos.reduce((acc, cur) => {
         acc[cur['date']] = acc[cur['date']] || []
         acc[cur['date']].push(cur)
+        return acc
       }, {})
     }
     const onChangeFilter = (filter_idx) => {

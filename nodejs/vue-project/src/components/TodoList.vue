@@ -11,27 +11,28 @@
             @click="completeTodo(todo.id)"
           />
         </div>
+
+        <div class="input-group-text">
+          <input class="form-input mt-0" type="date" :min="today" disabled :value="todo.date" />
+        </div>
+        <input type="text" class="form-control" :value="todo.job" />
+        <button
+          class="btn btn-outline-primary dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+        >
+          할일 관리
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li v-for="item in menu" :key="item.str">
+            <a class="dropdown-item" @click="item.func(todo.id)">
+              {{ item.str }}
+            </a>
+          </li>
+        </ul>
       </div>
-      <div class="input-group-text">
-        <input class="form-input mt-0" type="date" :min="today" disabled :value="todo.date" />
-      </div>
-      <input type="text" class="form-control" :value="todo.job" />
-      <button
-        class="btn btn-outline-primary dropdown-toggle"
-        type="button"
-        data-bs-toggle="dropdown"
-      >
-        할일 관리
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end">
-        <li v-for="item in menu" :key="item.str">
-          <a class="dropdown-item" @click="item.func(todo.id)">
-            {{ item.str }}
-          </a>
-        </li>
-      </ul>
+      <div v-show="idx + 1 < data.length" class="col border border-second"></div>
     </div>
-    <div v-show="idx + 1 < data.length" class="col border border-second"></div>
   </main>
 </template>
 <script>
