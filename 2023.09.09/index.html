@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    // function Item(title,price){
+    //         this.title = title;
+    //         this.price = price;
+    //         this.showPrice = function(){
+    //             console.log(`가격은  ${price}원 입니다.`);
+    //         }
+    // } 
+
+    // const Item1 =new Item('인형', 3000);
+    // const Item2 =new Item('가방', 8000);
+    // const Item3 =new Item('물컵', 9000);
+
+    // Item3.showPrice();
+
+    // console.log(Item1, Item2, Item3);
+
+let n = 'name';
+let a = 'age';
+
+const user = {
+    [n] : 'Mike',
+    [a] : 30,
+}
+
+console.log(user);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+<!--
+    var는 선언 및 초기화가 동시에 가능 
+    할당제를 호출하면 err가 아닌 undefind가 나온다.
+
+    let은 선언 단계와 초기화 단계가 분리되어 나온다. 
+
+    const는 선언과 할당이 동시에 가능하다.
+
+    if문 안에서 생성된 var는 if밖에서도 생성이 가능하지만
+    let,const는 if{}안에서만 가능하다.  -> 스코프
+
+    <생성자 함수>
+
+    <객체 리터럴>
+    let user = {
+        name: 'mike',
+        age: 30,
+    }
+
+
+    <생성자 함수>
+    function User(첫글자는 대문자)(name,age){
+        this.name = name;
+        this.age = age;
+        method 만들기
+        this.sayName = function(){
+            console.log(this.name);
+            ->sayName이라는 객체를 추가하면, this 해당되는 건 user5
+        }
+    }
+
+let user1 =new User('Mike', 30);
+let user2 =new User('jane', 22);
+let user3 =new User('Tom' , 17);
+let user5 =new user('han', 40);
+
+method함수 만들기다시 보기
+
+object.assign 객체복제
+const newUser = object.assign({}, user) user
+
+
+-->

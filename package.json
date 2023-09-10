@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "firebase": "^8.2.7",
     "vue": "^3.3.4"
   }
 }
