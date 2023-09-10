@@ -27,6 +27,10 @@ provider.setCustomParameters({
   display: 'popup'
 })
 
+//매번 만들어야 한다.
+
+const sessionStorage = window.sessionStorage
+
 export default {
   name: 'login',
   data() {
@@ -51,7 +55,7 @@ export default {
         .auth()
         .signInWithEmailAndPassword(this.email, this.password)
         .then((user) => {
-          this.$session.set('user_id', user.user.uid)
+          sessionStorage.setItem('user_id', user.user.id)
           this.$router.replace('msg')
         }) //로그인 성공하는 부분
         .catch((err) => {
